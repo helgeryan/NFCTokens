@@ -28,7 +28,15 @@ class ReloadAmountView: UIView {
     // MARK: - Life Cycle
     override func layoutSubviews() {
         super.layoutSubviews()
+        setupFonts()
+        addGestures()
+    }
+    
+    func setupFonts() {
         amountLabel.font = UIFont(name: "Mont-Bold", size: amountLabel.font.pointSize)
+    }
+    
+    func addGestures() {
         self.addGestureRecognizer(UITapGestureRecognizer(target: self, action: #selector(selectReloadAmount)))
     }
 

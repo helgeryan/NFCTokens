@@ -8,11 +8,13 @@
 import Foundation
 
 struct XealUser: Equatable, Codable {
+    // MARK: - Properties
     var firstName: String
     var lastName: String
     var accountValue: Double
     var id: Int
     
+    // MARK: - Helpers
     var name: String {
         var nameString = ""
         nameString = firstName

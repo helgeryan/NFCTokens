@@ -15,6 +15,7 @@ protocol HomeViewModelDelegate {
     func noUserFound()
 }
 
+// MARK: - HomeViewModel
 class HomeViewModel: NSObject {
     // MARK: - Properties
     var currUser: XealUser?
@@ -64,6 +65,7 @@ class HomeViewModel: NSObject {
     }
 }
 
+// MARK: - NFCNDEFReaderSessionDelegate
 extension HomeViewModel: NFCNDEFReaderSessionDelegate {
     func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
         // Handle Error

@@ -13,6 +13,7 @@
 		E6001961295F434800216228 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001960295F434800216228 /* HomeViewModel.swift */; };
 		E6001964295F4ECA00216228 /* ReloadAmmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001963295F4ECA00216228 /* ReloadAmmount.swift */; };
 		E6001966295F4F3600216228 /* XealUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001965295F4F3600216228 /* XealUser.swift */; };
+		E6001968295F61D700216228 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E6001967295F61D700216228 /* README.md */; };
 		E61F481C29527DAC00D937B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F481B29527DAC00D937B8 /* AppDelegate.swift */; };
 		E61F481E29527DAC00D937B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F481D29527DAC00D937B8 /* SceneDelegate.swift */; };
 		E61F482029527DAC00D937B8 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F481F29527DAC00D937B8 /* HomeViewController.swift */; };
@@ -48,6 +49,7 @@
 		E6001960295F434800216228 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E6001963295F4ECA00216228 /* ReloadAmmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadAmmount.swift; sourceTree = "<group>"; };
 		E6001965295F4F3600216228 /* XealUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XealUser.swift; sourceTree = "<group>"; };
+		E6001967295F61D700216228 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E61F481829527DAC00D937B8 /* Xeal Challenge App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xeal Challenge App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61F481B29527DAC00D937B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E61F481D29527DAC00D937B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -145,6 +147,7 @@
 		E61F481A29527DAC00D937B8 /* Xeal Challenge App */ = {
 			isa = PBXGroup;
 			children = (
+				E6001967295F61D700216228 /* README.md */,
 				E6B595EB295BE6270023F6EE /* Xeal Challenge App.entitlements */,
 				E61F482C29527DAE00D937B8 /* Info.plist */,
 				E69AB7082952EA9600D6E98C /* ConfirmPayment */,
@@ -322,6 +325,7 @@
 				E61F483F295280EF00D937B8 /* Fontfabric---Mont-ExtraLight.otf in Resources */,
 				E61F482329527DAC00D937B8 /* Main.storyboard in Resources */,
 				E61F4842295280EF00D937B8 /* Fontfabric---Mont-Black.otf in Resources */,
+				E6001968295F61D700216228 /* README.md in Resources */,
 				E69AB70C2952EAB700D6E98C /* ConfirmPaymentViewController.xib in Resources */,
 				E61F48482952812400D937B8 /* checkmark.json in Resources */,
 			);
