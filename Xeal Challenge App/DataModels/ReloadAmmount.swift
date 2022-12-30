@@ -8,8 +8,10 @@
 import Foundation
 
 struct ReloadAmount: Equatable, Codable {
+    // MARK: - Properties
     var value: Double
     
+    // MARK: - Helpers
     var dollarString: String {
         return String(format: "$%0.0f", value)
     }
