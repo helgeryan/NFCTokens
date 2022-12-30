@@ -52,6 +52,6 @@ Though the app is a simple single view application, the architectural structure 
 ### Pay now button spinner
 Since there is no payment processing that is done in the app the spinner would never be observed by a user. To mimic a background payment processing a 6 second timer was implemented to ensure the spinner is visible in the demo of the app.
 
-### Confirmation Haptics
+### Confirmation haptics
 Once a confirmation is presented to the user, there must be some way to navigate back to the previous screen. A simple tap gesture is added to the page and tapping the screen will dismiss and navigate back to the original screen.
 
