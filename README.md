@@ -1,5 +1,19 @@
 # Xeal Example App - Ryan Helgeson
 
+## Description
+Example app used to display ability to implement a simple app to read/write NFC Tags. App required to meet the following requirements: 
+
+### Design
+1. Figma Link to view the screens and inspect components
+2. Tap the play button in top right to see the prototype and animations
+3. Use Lottie to add the included JSON files (checkmark, spinner) as animations to the app
+4. Fonts files for the text within the app
+5. While checkmark is being shown, implement some slight haptics 
+
+### NFC
+1. Pressing the “Funds Available” rectangle shall read the user’s name & account balance from an NFC tag.
+2. After “paying/adding” funds, the new balance shall be written back to the NFC tag. 
+ 
 ## XCode Version - 14.2 (14C18)
 
 ## CocoaPods Used
@@ -24,5 +38,20 @@ To first initiate a tag to have user data in the app, a check was implemented to
 ### No formal data structure to follow
 Since no data structure was provided, a JSON data block was the chosen method to pass data back and forth from the NFC tags. The choice of JSON simplifies the data transfer and makes for quick verification of data using inherit decoders/encoders available in Swift.
 
+Example JSON block: 
+{
+    accountValue = 0;
+    firstName = Amanda;
+    id = 1;
+    lastName = Gonzalez;
+}
+
 ### Model–View–ViewModel (MVVM)
 Though the app is a simple single view application, the architectural structure chosen for the app of MVVM provides separation of GUI and data operations. This use of MVVM reduces the responsibility for the View and ViewModel and reduces cluttering of code and long View/ViewController files.
+
+### Pay now button spinner
+Since there is no payment processing that is done in the app the spinner would never be observed by a user. To mimic a background payment processing a 6 second timer was implemented to ensure the spinner is visible in the demo of the app.
+
+### Confirmation Haptics
+Once a confirmation is presented to the user, there must be some way to navigate back to the previous screen. A simple tap gesture is added to the page and tapping the screen will dismiss and navigate back to the original screen.
+
