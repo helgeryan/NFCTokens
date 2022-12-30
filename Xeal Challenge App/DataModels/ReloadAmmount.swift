@@ -1,5 +1,5 @@
 //
-//  ReloadAmmount.swift
+//  ReloadAmount.swift
 //  Xeal Challenge App
 //
 //  Created by Ryan Helgeson on 12/30/22.

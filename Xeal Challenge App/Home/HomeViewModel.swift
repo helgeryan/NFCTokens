@@ -166,7 +166,7 @@ extension HomeViewModel: NFCNDEFReaderSessionDelegate {
                             session.invalidate()
                         })
                     } else {
-                        session.invalidate(errorMessage: "No reload ammount selected")
+                        session.invalidate(errorMessage: "No reload amount selected")
                     }
                 } else {
                     session.invalidate(errorMessage: "Failed to verify user")

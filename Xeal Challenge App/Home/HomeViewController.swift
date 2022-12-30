@@ -56,15 +56,15 @@ class HomeViewController: UIViewController {
     }
     
     func setupReloadAmounts() {
-        addReloadAmount(containerView: reloadContainerView1, ammountView: reloadAmountView1, ammount: 5)
-        addReloadAmount(containerView: reloadContainerView2, ammountView: reloadAmountView2, ammount: 25)
-        addReloadAmount(containerView: reloadContainerView3, ammountView: reloadAmountView3, ammount: 50)
+        addReloadAmount(containerView: reloadContainerView1, amountView: reloadAmountView1, amount: 5)
+        addReloadAmount(containerView: reloadContainerView2, amountView: reloadAmountView2, amount: 25)
+        addReloadAmount(containerView: reloadContainerView3, amountView: reloadAmountView3, amount: 50)
     }
     
-    func addReloadAmount(containerView: UIView, ammountView: ReloadAmountView, ammount: Double) {
-        ammountView.fixInView(parentView: containerView)
-        ammountView.reloadAmount = ReloadAmount(value: ammount)
-        ammountView.delegate = self
+    func addReloadAmount(containerView: UIView, amountView: ReloadAmountView, amount: Double) {
+        amountView.fixInView(parentView: containerView)
+        amountView.reloadAmount = ReloadAmount(value: amount)
+        amountView.delegate = self
     }
     
     func setupFonts() {
