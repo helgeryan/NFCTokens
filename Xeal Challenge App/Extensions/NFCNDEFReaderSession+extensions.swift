@@ -18,14 +18,27 @@ extension NFCNDEFReaderSession {
         }
     }
     
-    func writeToTag(tag: NFCNDEFTag, message: NFCNDEFMessage) {
+    func writeToTag<T: Codable>(tag: NFCNDEFTag, data: T,  completion: @escaping (T) -> ()) {
+        let encodedData = try! JSONEncoder().encode(data)
+        
+        let payload = NFCNDEFPayload.init(
+            format: .nfcWellKnown,
+            type: "T".data(using: .utf8)!,
+            identifier: Data(),
+            payload: encodedData
+        )
+        
+        let message = NFCNDEFMessage.init(records: [payload])
         tag.writeNDEF(message, completionHandler: { (error: Error?) in
-            if nil != error {
-                self.alertMessage = "Write NDEF message fail: \(error!)"
+            if let error = error {
+                self.alertMessage = "Write NDEF message fail: \(error)"
+                self.invalidate()
+                return completion(data)
             } else {
                 self.alertMessage = "Write NDEF message successful."
+                self.invalidate()
+                return completion(data)
             }
-            self.invalidate()
         })
     }
     
@@ -52,6 +65,7 @@ extension NFCNDEFReaderSession {
             self.invalidate()
         })
     }
+
     
     func alertMoreThanOneTag() {
         // Restart polling in 500 milliseconds.

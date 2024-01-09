@@ -17,6 +17,7 @@ protocol HomeViewModelDelegate {
 
 // MARK: - HomeViewModel
 class HomeViewModel: NSObject {
+    let nfcService: NFCService = NFCService()
     // MARK: - Properties
     var currUser: XealUser?
     var selectedReloadAmount: ReloadAmount?
@@ -26,22 +27,12 @@ class HomeViewModel: NSObject {
     var delegate: HomeViewModelDelegate?
     
     // MARK: - Setup NFCReaderSessions
-    func setupSession() {
-        session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
-        session?.alertMessage = "Hold your device near the tag to reload your account with additional funds."
-        session?.begin()
-    }
-    
-    func setupNewUserSession() {
-        self.newUserSession = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
-        self.newUserSession?.alertMessage = "Hold your device near a tag to setup new user."
-        self.newUserSession?.begin()
-    }
-    
-    func setupReadUserSession() {
-        self.readUserSession = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
-        self.readUserSession?.alertMessage = "Hold your device near a tag to read account data"
-        self.readUserSession?.begin()
+    func setupSession(action: NFCAction) {
+        nfcService.delegate = self
+        nfcService.setupSession(action: action)
+//        session = NFCNDEFReaderSession(delegate: self, queue: DispatchQueue.main, invalidateAfterFirstRead: false)
+//        session?.alertMessage = "Hold your device near the tag to reload your account with additional funds."
+//        session?.begin()
     }
     
     // MARK: - Coding
@@ -189,5 +180,27 @@ extension HomeViewModel: NFCNDEFReaderSessionDelegate {
 
         let message = NFCNDEFMessage.init(records: [newUser])
         return message
+    }
+}
+
+extension HomeViewModel: NFCServiceDelegate {
+    func reloadCompleted(user: XealUser) {
+        self.delegate?.paymentSuccess(user)
+    }
+    
+    func didReadUser(user: XealUser) {
+        self.currUser = user
+        self.delegate?.userUpdated(user)
+    }
+    
+    func nfcFinishedWithError(error: NFCError) {
+        // TODO: - Handle Error
+        switch error {
+        case .readFailure:
+            break
+        case .userNotFound:
+            self.delegate?.noUserFound()
+            break
+        }
     }
 }

@@ -109,11 +109,11 @@ class HomeViewController: UIViewController {
             setupPayNowButton()
             return
         }
-        model.setupSession()
+        model.setupSession(action: .reloadUser)
     }
     
     @objc func doReadAccount() {
-        model.setupReadUserSession()
+        model.setupSession(action: .readUser)
 //        fundsAvailableView.doReadSession()
     }
     
@@ -215,7 +215,7 @@ extension HomeViewController: HomeViewModelDelegate {
     func promptNewUserSession() {
         let alert = UIAlertController(title: "No user found.", message: "Use a demo user?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-            self.model.setupNewUserSession()
+            self.model.setupSession(action: .createUser)
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel))
         self.present(alert, animated: true)

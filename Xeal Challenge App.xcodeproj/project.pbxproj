@@ -32,6 +32,7 @@
 		E61F48482952812400D937B8 /* checkmark.json in Resources */ = {isa = PBXBuildFile; fileRef = E61F48462952812400D937B8 /* checkmark.json */; };
 		E69AB70B2952EAB700D6E98C /* ConfirmPaymentViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69AB7092952EAB700D6E98C /* ConfirmPaymentViewController.swift */; };
 		E69AB70C2952EAB700D6E98C /* ConfirmPaymentViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E69AB70A2952EAB700D6E98C /* ConfirmPaymentViewController.xib */; };
+		E69EAF622B4B1E180064679F /* NFCService.swift in Sources */ = {isa = PBXBuildFile; fileRef = E69EAF612B4B1E180064679F /* NFCService.swift */; };
 		E6B1491429528F020000BE9D /* UIView+Designables.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1491329528F020000BE9D /* UIView+Designables.swift */; };
 		E6B14916295290F90000BE9D /* PayNowButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B14915295290F90000BE9D /* PayNowButton.swift */; };
 		E6B1491B2952C22B0000BE9D /* UIView+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1491A2952C22B0000BE9D /* UIView+extensions.swift */; };
@@ -70,6 +71,7 @@
 		E61F48462952812400D937B8 /* checkmark.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = checkmark.json; sourceTree = "<group>"; };
 		E69AB7092952EAB700D6E98C /* ConfirmPaymentViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ConfirmPaymentViewController.swift; sourceTree = "<group>"; };
 		E69AB70A2952EAB700D6E98C /* ConfirmPaymentViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ConfirmPaymentViewController.xib; sourceTree = "<group>"; };
+		E69EAF612B4B1E180064679F /* NFCService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCService.swift; sourceTree = "<group>"; };
 		E6B1491329528F020000BE9D /* UIView+Designables.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Designables.swift"; sourceTree = "<group>"; };
 		E6B14915295290F90000BE9D /* PayNowButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PayNowButton.swift; sourceTree = "<group>"; };
 		E6B1491A2952C22B0000BE9D /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
@@ -147,6 +149,7 @@
 		E61F481A29527DAC00D937B8 /* Xeal Challenge App */ = {
 			isa = PBXGroup;
 			children = (
+				E69EAF602B4B1E040064679F /* NFC */,
 				E6001967295F61D700216228 /* README.md */,
 				E6B595EB295BE6270023F6EE /* Xeal Challenge App.entitlements */,
 				E61F482C29527DAE00D937B8 /* Info.plist */,
@@ -205,6 +208,14 @@
 				E69AB70A2952EAB700D6E98C /* ConfirmPaymentViewController.xib */,
 			);
 			path = ConfirmPayment;
+			sourceTree = "<group>";
+		};
+		E69EAF602B4B1E040064679F /* NFC */ = {
+			isa = PBXGroup;
+			children = (
+				E69EAF612B4B1E180064679F /* NFCService.swift */,
+			);
+			path = NFC;
 			sourceTree = "<group>";
 		};
 		E6B1491229528EDA0000BE9D /* IBDesignables */ = {
@@ -383,6 +394,7 @@
 				E61F482029527DAC00D937B8 /* HomeViewController.swift in Sources */,
 				E600195C295CF0BB00216228 /* FundsAvailableView.swift in Sources */,
 				E61F481C29527DAC00D937B8 /* AppDelegate.swift in Sources */,
+				E69EAF622B4B1E180064679F /* NFCService.swift in Sources */,
 				E6001961295F434800216228 /* HomeViewModel.swift in Sources */,
 				E6001964295F4ECA00216228 /* ReloadAmmount.swift in Sources */,
 				E6B1491D2952C2C70000BE9D /* ReloadAmountView.swift in Sources */,
