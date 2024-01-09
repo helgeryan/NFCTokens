@@ -27,13 +27,13 @@ class NFCService: NSObject {
         session?.begin()
     }
     
-    func completeNFCSession(message: String) {
+    private func completeNFCSession(message: String) {
         session?.alertMessage = message
         session?.invalidate()
         currentAction = nil
     }
     
-    func completeNFCSession(_ error: NFCError, message: String) {
+    private func completeNFCSession(_ error: NFCError, message: String) {
         session?.invalidate(errorMessage: message)
         self.delegate?.nfcFinishedWithError(error: error)
         NFCLogger.error(error)
