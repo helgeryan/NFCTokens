@@ -1,0 +1,22 @@
+//
+//  Logger.swift
+//  Xeal Challenge App
+//
+//  Created by Ryan Helgeson on 1/9/24.
+//
+
+import Foundation
+
+class NFCLogger {
+    static func log(_ text: String) {
+        #if DEBUG
+        debugPrint("LOG: \(text)")
+        #endif
+    }
+    
+    static func error(_ error: Error) {
+        #if DEBUG
+        debugPrint("ERROR: \(error.localizedDescription)")
+        #endif
+    }
+}

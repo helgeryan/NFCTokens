@@ -109,16 +109,15 @@ class HomeViewController: UIViewController {
             setupPayNowButton()
             return
         }
-        model.setupSession(action: .reloadUser)
+        model.doReload()
     }
     
     @objc func doReadAccount() {
-        model.setupSession(action: .readUser)
-//        fundsAvailableView.doReadSession()
+        model.readUser()
     }
     
     // MARK: - Demo Payment Processing
-    func pay() {
+    func pay(user: XealUser) {
         if isPaymentProcessing {
             return
         }
@@ -126,10 +125,14 @@ class HomeViewController: UIViewController {
         isPaymentProcessing = true
         self.startAnimation()
         if let selectedReloadAmount = model.selectedReloadAmount {
-            processPayment(reloadAmount: selectedReloadAmount, completion: { success in
+            processPayment(reloadAmount: selectedReloadAmount, completion: { [weak self] success in
+                guard let self = self else { return }
+                
                 self.stopAnimation()
+               
                 if success {
                     self.presentPaymentConfirmation(selectedReloadAmount)
+                    self.setupWithUser(user)
                     self.model.selectedReloadAmount = nil
                     self.setupReloadViews()
                     self.setupPayNowButton()
@@ -204,8 +207,7 @@ extension HomeViewController: HomeViewModelDelegate {
     }
     
     func paymentSuccess(_ user: XealUser) {
-        setupWithUser(user)
-        pay()
+        pay(user: user)
     }
     
     func noUserFound() {
@@ -215,7 +217,7 @@ extension HomeViewController: HomeViewModelDelegate {
     func promptNewUserSession() {
         let alert = UIAlertController(title: "No user found.", message: "Use a demo user?", preferredStyle: .alert)
         alert.addAction(UIAlertAction(title: "Yes", style: .default, handler: { _ in
-            self.model.setupSession(action: .createUser)
+            self.model.doCreateNewUser()
         }))
         alert.addAction(UIAlertAction(title: "No", style: .cancel))
         self.present(alert, animated: true)

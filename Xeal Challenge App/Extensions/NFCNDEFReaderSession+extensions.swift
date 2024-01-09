@@ -18,7 +18,7 @@ extension NFCNDEFReaderSession {
         }
     }
     
-    func writeToTag<T: Codable>(tag: NFCNDEFTag, data: T,  completion: @escaping (T) -> ()) {
+    func writeToTag<T: Codable>(tag: NFCNDEFTag, data: T, confirmationMessage: String = "Write NDEF message successful.", completion: @escaping (T) -> ()) {
         let encodedData = try! JSONEncoder().encode(data)
         
         let payload = NFCNDEFPayload.init(
@@ -35,37 +35,12 @@ extension NFCNDEFReaderSession {
                 self.invalidate()
                 return completion(data)
             } else {
-                self.alertMessage = "Write NDEF message successful."
+                self.alertMessage = confirmationMessage
                 self.invalidate()
                 return completion(data)
             }
         })
     }
-    
-    func writeDemo(tag: NFCNDEFTag, completion: @escaping (XealUser) -> Void) {
-        let user = XealUser(firstName: "Amanda", lastName: "Gonzalez", accountValue: 0.00, id: 1)
-        let data = try! JSONEncoder().encode(user)
-        
-        let customTextPayload2 = NFCNDEFPayload.init(
-            format: .nfcWellKnown,
-            type: "T".data(using: .utf8)!,
-            identifier: Data(),
-            payload: data
-        )
-        
-        let message = NFCNDEFMessage.init(records: [customTextPayload2])
-        
-        tag.writeNDEF(message, completionHandler: { (error: Error?) in
-            if nil != error {
-                self.alertMessage = "Write NDEF message fail: \(error!)"
-            } else {
-                self.alertMessage = "Demo user Amanda Gonzalez created!"
-                completion(user)
-            }
-            self.invalidate()
-        })
-    }
-
     
     func alertMoreThanOneTag() {
         // Restart polling in 500 milliseconds.
