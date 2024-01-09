@@ -17,6 +17,7 @@ enum NFCError: LocalizedError {
     case tagNotCompliant
     case tagReadOnly
     case noTagsFound
+    case verifyUser
     
     var localizedDescription: String {
         switch self {
@@ -38,6 +39,8 @@ enum NFCError: LocalizedError {
             return "Tag is read only"
         case .noTagsFound:
             return "No tags found"
+        case .verifyUser:
+            return "Failed to verify user"
         }
     }
 }

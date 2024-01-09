@@ -9,15 +9,6 @@ import Foundation
 import CoreNFC
 
 extension NFCNDEFReaderSession {
-    func sessionHasError(error: Error?, errorMessage: String) -> Bool {
-        if error != nil {
-            self.invalidate(errorMessage: errorMessage)
-            return true
-        } else {
-            return false
-        }
-    }
-    
     func writeToTag<T: Codable>(tag: NFCNDEFTag, data: T, confirmationMessage: String = "Write NDEF message successful.", completion: @escaping (T) -> ()) {
         let encodedData = try! JSONEncoder().encode(data)
         

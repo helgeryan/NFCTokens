@@ -87,15 +87,17 @@ extension NFCService: NFCNDEFReaderSessionDelegate {
         if let tag = tags.first {
             session.connect(to: tag, completionHandler: { [weak self] (error: Error?) in
                 guard let self = self else {
-
+                    NFCLogger.error(NFCError.unavailable)
                     return
                 }
-                if session.sessionHasError(error: error, errorMessage:  "Unable to connect to tag.") {
+                if let error = error {
+                    self.completeNFCSession(.nfcTagError(error: error), message: "Unable to connect")
                     return
                 }
                 
                 tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
-                    if session.sessionHasError(error: error, errorMessage: "Unable to query the NDEF status of tag.") {
+                    if let error = error {
+                        self.completeNFCSession(.nfcTagError(error: error), message: "Unable to query the NDEF status of tag.")
                         return
                     }
 
@@ -149,25 +151,26 @@ extension NFCService: NFCNDEFReaderSessionDelegate {
     func updateUserAccountFundsAvailable(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser, amount: ReloadAmount) {
         NFCLogger.log("Reloading \(amount.dollarString) to \(user.name)")
         tag.readNDEF(completionHandler: { mess, error in
-            if session.sessionHasError(error: error, errorMessage: "Failed to read NDEF") {
+            if let error = error {
+                self.completeNFCSession(.nfcTagError(error: error), message: "Failed to read data")
                 return
             } else if let payload = mess?.records.first {
                 if var tagUser: XealUser = self.decodeStruct(payload), tagUser.id == user.id {
                     tagUser.accountValue = tagUser.accountValue + amount.value
                     let message = self.createNewUserMessage(user: tagUser)
                     tag.writeNDEF(message, completionHandler: { error in
-                        if session.sessionHasError(error: error, errorMessage: "Failed to process payment") {
+                        if let error = error {
+                            self.completeNFCSession(.nfcTagError(error: error), message: "Failed to process payment")
                             return
                         }
                         self.delegate?.reloadCompleted(user: tagUser)
-                        session.alertMessage = "Processed payment!"
-                        session.invalidate()
+                        self.completeNFCSession(message: "Processed payment!")
                     })
                 } else {
-                    session.invalidate(errorMessage: "Failed to verify user")
+                    self.completeNFCSession(.verifyUser, message: "Failed to verify user")
                 }
             } else {
-                session.invalidate(errorMessage: "Failed to read user data")
+                self.completeNFCSession(.noDataFound, message: "Failed to find user data")
             }
         })
     }
