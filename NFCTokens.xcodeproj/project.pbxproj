@@ -7,7 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		DAF63FAE99A7A962977A11F3 /* Pods_Xeal_Challenge_App.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5151294FB5C5B9B94433F3EF /* Pods_Xeal_Challenge_App.framework */; };
 		E600195C295CF0BB00216228 /* FundsAvailableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600195B295CF0BB00216228 /* FundsAvailableView.swift */; };
 		E600195E295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600195D295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift */; };
 		E6001961295F434800216228 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001960295F434800216228 /* HomeViewModel.swift */; };
@@ -42,19 +41,20 @@
 		E6B1491D2952C2C70000BE9D /* ReloadAmountView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6B1491C2952C2C70000BE9D /* ReloadAmountView.swift */; };
 		E6B1491F2952C2DA0000BE9D /* ReloadAmountView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E6B1491E2952C2DA0000BE9D /* ReloadAmountView.xib */; };
 		E6E8C1DC29554114008DCF23 /* UIFont+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6E8C1DB29554114008DCF23 /* UIFont+extensions.swift */; };
+		F6DB4053C1B74EE3551067AD /* Pods_NFCTokens.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 576F4A0F2BC391319E2278A7 /* Pods_NFCTokens.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		38B7C8D5DF7741454CB3DC66 /* Pods-Xeal Challenge App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xeal Challenge App.release.xcconfig"; path = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App.release.xcconfig"; sourceTree = "<group>"; };
-		5151294FB5C5B9B94433F3EF /* Pods_Xeal_Challenge_App.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Xeal_Challenge_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		582D7BFD3A84E2B5C5630A04 /* Pods-Xeal Challenge App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Xeal Challenge App.debug.xcconfig"; path = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App.debug.xcconfig"; sourceTree = "<group>"; };
+		00FA61581C3E0DB3F5834533 /* Pods-NFCTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCTokens.release.xcconfig"; path = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens.release.xcconfig"; sourceTree = "<group>"; };
+		334B8A4859044422AC7A036B /* Pods-NFCTokens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-NFCTokens.debug.xcconfig"; path = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens.debug.xcconfig"; sourceTree = "<group>"; };
+		576F4A0F2BC391319E2278A7 /* Pods_NFCTokens.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_NFCTokens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E600195B295CF0BB00216228 /* FundsAvailableView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FundsAvailableView.swift; sourceTree = "<group>"; };
 		E600195D295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NFCNDEFReaderSession+extensions.swift"; sourceTree = "<group>"; };
 		E6001960295F434800216228 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E6001963295F4ECA00216228 /* ReloadAmmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadAmmount.swift; sourceTree = "<group>"; };
 		E6001965295F4F3600216228 /* XealUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XealUser.swift; sourceTree = "<group>"; };
 		E6001967295F61D700216228 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
-		E61F481829527DAC00D937B8 /* Xeal Challenge App.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Xeal Challenge App.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		E61F481829527DAC00D937B8 /* NFCTokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCTokens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61F481B29527DAC00D937B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E61F481D29527DAC00D937B8 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		E61F481F29527DAC00D937B8 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
@@ -83,7 +83,7 @@
 		E6B1491A2952C22B0000BE9D /* UIView+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+extensions.swift"; sourceTree = "<group>"; };
 		E6B1491C2952C2C70000BE9D /* ReloadAmountView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadAmountView.swift; sourceTree = "<group>"; };
 		E6B1491E2952C2DA0000BE9D /* ReloadAmountView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = ReloadAmountView.xib; sourceTree = "<group>"; };
-		E6B595EB295BE6270023F6EE /* Xeal Challenge App.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Xeal Challenge App.entitlements"; sourceTree = "<group>"; };
+		E6B595EB295BE6270023F6EE /* NFCTokens.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = NFCTokens.entitlements; sourceTree = "<group>"; };
 		E6E8C1DB29554114008DCF23 /* UIFont+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+extensions.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -92,7 +92,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DAF63FAE99A7A962977A11F3 /* Pods_Xeal_Challenge_App.framework in Frameworks */,
+				F6DB4053C1B74EE3551067AD /* Pods_NFCTokens.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +102,7 @@
 		B8F550D8ACF6A454DC4B448D /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				5151294FB5C5B9B94433F3EF /* Pods_Xeal_Challenge_App.framework */,
+				576F4A0F2BC391319E2278A7 /* Pods_NFCTokens.framework */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -110,8 +110,8 @@
 		D37B0F3352C0387F66B7CE18 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				582D7BFD3A84E2B5C5630A04 /* Pods-Xeal Challenge App.debug.xcconfig */,
-				38B7C8D5DF7741454CB3DC66 /* Pods-Xeal Challenge App.release.xcconfig */,
+				334B8A4859044422AC7A036B /* Pods-NFCTokens.debug.xcconfig */,
+				00FA61581C3E0DB3F5834533 /* Pods-NFCTokens.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -137,7 +137,7 @@
 		E61F480F29527DAB00D937B8 = {
 			isa = PBXGroup;
 			children = (
-				E61F481A29527DAC00D937B8 /* Xeal Challenge App */,
+				E61F481A29527DAC00D937B8 /* NFCTokens */,
 				E61F481929527DAC00D937B8 /* Products */,
 				D37B0F3352C0387F66B7CE18 /* Pods */,
 				B8F550D8ACF6A454DC4B448D /* Frameworks */,
@@ -147,17 +147,17 @@
 		E61F481929527DAC00D937B8 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				E61F481829527DAC00D937B8 /* Xeal Challenge App.app */,
+				E61F481829527DAC00D937B8 /* NFCTokens.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
 		};
-		E61F481A29527DAC00D937B8 /* Xeal Challenge App */ = {
+		E61F481A29527DAC00D937B8 /* NFCTokens */ = {
 			isa = PBXGroup;
 			children = (
 				E69EAF602B4B1E040064679F /* NFC */,
 				E6001967295F61D700216228 /* README.md */,
-				E6B595EB295BE6270023F6EE /* Xeal Challenge App.entitlements */,
+				E6B595EB295BE6270023F6EE /* NFCTokens.entitlements */,
 				E61F482C29527DAE00D937B8 /* Info.plist */,
 				E69AB7082952EA9600D6E98C /* ConfirmPayment */,
 				E6001962295F4EB100216228 /* DataModels */,
@@ -171,7 +171,7 @@
 				E61F483229527E4F00D937B8 /* Views */,
 				E69EAF672B4DEE3F0064679F /* Logger.swift */,
 			);
-			path = "Xeal Challenge App";
+			path = NFCTokens;
 			sourceTree = "<group>";
 		};
 		E61F483229527E4F00D937B8 /* Views */ = {
@@ -276,9 +276,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		E61F481729527DAC00D937B8 /* Xeal Challenge App */ = {
+		E61F481729527DAC00D937B8 /* NFCTokens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = E61F482F29527DAE00D937B8 /* Build configuration list for PBXNativeTarget "Xeal Challenge App" */;
+			buildConfigurationList = E61F482F29527DAE00D937B8 /* Build configuration list for PBXNativeTarget "NFCTokens" */;
 			buildPhases = (
 				428118D3F2B196E2C870F26B /* [CP] Check Pods Manifest.lock */,
 				E61F481429527DAC00D937B8 /* Sources */,
@@ -290,9 +290,9 @@
 			);
 			dependencies = (
 			);
-			name = "Xeal Challenge App";
+			name = NFCTokens;
 			productName = "Xeal Challenge App";
-			productReference = E61F481829527DAC00D937B8 /* Xeal Challenge App.app */;
+			productReference = E61F481829527DAC00D937B8 /* NFCTokens.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -310,7 +310,7 @@
 					};
 				};
 			};
-			buildConfigurationList = E61F481329527DAB00D937B8 /* Build configuration list for PBXProject "Xeal Challenge App" */;
+			buildConfigurationList = E61F481329527DAB00D937B8 /* Build configuration list for PBXProject "NFCTokens" */;
 			compatibilityVersion = "Xcode 14.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -323,7 +323,7 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				E61F481729527DAC00D937B8 /* Xeal Challenge App */,
+				E61F481729527DAC00D937B8 /* NFCTokens */,
 			);
 		};
 /* End PBXProject section */
@@ -360,15 +360,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NFCTokens/Pods-NFCTokens-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-NFCTokens/Pods-NFCTokens-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-NFCTokens/Pods-NFCTokens-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		428118D3F2B196E2C870F26B /* [CP] Check Pods Manifest.lock */ = {
@@ -386,7 +386,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-Xeal Challenge App-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-NFCTokens-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -476,6 +476,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = NFCTokens/NFCTokens.entitlements;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -536,6 +537,7 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_ENTITLEMENTS = NFCTokens/NFCTokens.entitlements;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -560,16 +562,16 @@
 		};
 		E61F483029527DAE00D937B8 /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 582D7BFD3A84E2B5C5630A04 /* Pods-Xeal Challenge App.debug.xcconfig */;
+			baseConfigurationReference = 334B8A4859044422AC7A036B /* Pods-NFCTokens.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Xeal Challenge App/Xeal Challenge App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = NFCTokens/NFCTokens.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VY9FRH555S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Xeal Challenge App/Info.plist";
+				INFOPLIST_FILE = NFCTokens/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Xeal;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Xeal would like to use this device for Near Field Communication.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -596,16 +598,16 @@
 		};
 		E61F483129527DAE00D937B8 /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 38B7C8D5DF7741454CB3DC66 /* Pods-Xeal Challenge App.release.xcconfig */;
+			baseConfigurationReference = 00FA61581C3E0DB3F5834533 /* Pods-NFCTokens.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = "Xeal Challenge App/Xeal Challenge App.entitlements";
+				CODE_SIGN_ENTITLEMENTS = NFCTokens/NFCTokens.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = VY9FRH555S;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = "Xeal Challenge App/Info.plist";
+				INFOPLIST_FILE = NFCTokens/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = Xeal;
 				INFOPLIST_KEY_NFCReaderUsageDescription = "Xeal would like to use this device for Near Field Communication.";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -633,7 +635,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		E61F481329527DAB00D937B8 /* Build configuration list for PBXProject "Xeal Challenge App" */ = {
+		E61F481329527DAB00D937B8 /* Build configuration list for PBXProject "NFCTokens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E61F482D29527DAE00D937B8 /* Debug */,
@@ -642,7 +644,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		E61F482F29527DAE00D937B8 /* Build configuration list for PBXNativeTarget "Xeal Challenge App" */ = {
+		E61F482F29527DAE00D937B8 /* Build configuration list for PBXNativeTarget "NFCTokens" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				E61F483029527DAE00D937B8 /* Debug */,

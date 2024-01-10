@@ -64,7 +64,7 @@ class NFCService: NSObject {
     private func connect( session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> Error? {
         await withCheckedContinuation { continuation in
             session.connect(to: tag, completionHandler: { [weak self] (error: Error?) in
-                guard let self = self else {
+                guard let _ = self else {
                     NFCLogger.error(NFCError.unavailable)
                     continuation.resume(returning: NFCError.unavailable)
                     return

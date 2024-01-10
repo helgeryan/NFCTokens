@@ -11,6 +11,6 @@
 #endif
 
 
-FOUNDATION_EXPORT double Pods_Xeal_Challenge_AppVersionNumber;
-FOUNDATION_EXPORT const unsigned char Pods_Xeal_Challenge_AppVersionString[];
+FOUNDATION_EXPORT double Pods_NFCTokensVersionNumber;
+FOUNDATION_EXPORT const unsigned char Pods_NFCTokensVersionString[];
 
