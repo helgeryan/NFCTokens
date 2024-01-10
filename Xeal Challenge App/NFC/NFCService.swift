@@ -70,7 +70,6 @@ class NFCService: NSObject {
                     return
                 }
                 if let error = error {
-                    self.completeNFCSession(.nfcTagError(error: error), message: "Unable to connect")
                     continuation.resume(returning: error)
                     return
                 }
@@ -80,29 +79,25 @@ class NFCService: NSObject {
         }
     }
     
-    private func queryStatus(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> Error? {
+    private func queryStatus(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> NFCError? {
         await withCheckedContinuation { continuation in
             tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
                 if let error = error {
-                    self.completeNFCSession(.nfcTagError(error: error), message: "Unable to query the NDEF status of tag.")
-                    continuation.resume(returning: error)
+                    continuation.resume(returning: .nfcTagError(error: error))
                     return
                 }
                 
                 switch ndefStatus {
                 case .notSupported:
-                    self.completeNFCSession(.tagNotCompliant, message: "Tag is not NDEF compliant.")
                     continuation.resume(returning: NFCError.tagNotCompliant)
                     break
                 case .readOnly:
-                    self.completeNFCSession(.tagReadOnly, message: "Tag is read only")
                     continuation.resume(returning: NFCError.tagReadOnly)
                     break
                 case .readWrite:
                     continuation.resume(returning: nil)
                     break
                 @unknown default:
-                    self.completeNFCSession(.unknown, message: "Unknown error")
                     continuation.resume(returning: NFCError.unknown)
                     break
                 }
@@ -270,13 +265,19 @@ extension NFCService: NFCNDEFReaderSessionDelegate {
         if let tag = tags.first {
             Task {
                 // Connect to the tag
-                if await self.connect(session: session, tag: tag) == nil {
-                    // Query the tag
-                    if await self.queryStatus(session: session, tag: tag) == nil {
-                        // Perform the action
-                        await self.runAction(session: session, tag: tag)
-                    }
+                if let error = await self.connect(session: session, tag: tag) {
+                    self.completeNFCSession(.nfcTagError(error: error), message: "Unable to connect")
+                    return
                 }
+                
+                // Query the tag, if error don't do action
+                if let error = await self.queryStatus(session: session, tag: tag) {
+                    self.completeNFCSession(error, message: "Tag is not read/write")
+                    return
+                }
+                
+                // Perform the action
+                await self.runAction(session: session, tag: tag)
             }
         } else {
             self.completeNFCSession(.noTagsFound, message: "No tags found, try again")
