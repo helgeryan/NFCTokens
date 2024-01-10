@@ -19,7 +19,7 @@ enum NFCError: LocalizedError {
     case noTagsFound
     case verifyUser
     
-    var localizedDescription: String {
+    var nfcDescription: String {
         switch self {
         case .unavailable:
             return "Service unavailable"

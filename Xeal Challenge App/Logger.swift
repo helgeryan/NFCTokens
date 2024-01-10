@@ -16,7 +16,11 @@ class NFCLogger {
     
     static func error(_ error: Error) {
         #if DEBUG
-        debugPrint("ERROR: \(error.localizedDescription)")
+        if let nfcError = error as? NFCError {
+            debugPrint("ERROR: \(nfcError.nfcDescription)")
+        } else {
+            debugPrint("ERROR: \(error.localizedDescription)")
+        }
         #endif
     }
 }
