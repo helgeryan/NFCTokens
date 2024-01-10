@@ -28,156 +28,89 @@ class NFCService: NSObject {
     }
     
     private func completeNFCSession(message: String) {
-        session?.alertMessage = message
-        session?.invalidate()
-        currentAction = nil
+        DispatchQueue.main.async {
+            self.session?.alertMessage = message
+            self.session?.invalidate()
+            self.currentAction = nil
+        }
     }
     
     private func completeNFCSession(_ error: NFCError, message: String) {
-        session?.invalidate(errorMessage: message)
-        self.delegate?.nfcFinishedWithError(error: error)
-        NFCLogger.error(error)
-        currentAction = nil
+        DispatchQueue.main.async {
+            NFCLogger.error(error)
+            self.session?.invalidate(errorMessage: message)
+            self.delegate?.nfcFinishedWithError(error: error)
+            self.currentAction = nil
+        }
     }
     
-    private func runAction(session: NFCNDEFReaderSession, tag: NFCNDEFTag) {
+    private func runAction(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async {
         switch self.currentAction {
         case .createUser(user: let user):
-            session.writeToTag(tag: tag, data: user, confirmationMessage: "Created new user: \(user.name)", completion: { [weak self] user in
-                guard let self = self else {
-                    return
-                }
-                self.delegate?.didReadUser(user: user)
-            })
+            await self.creatUser(session: session, tag: tag, user: user)
             break
         case .readUser:
-            self.readUserAccountInfo(session: session, tag: tag)
+            await self.readUserAccountInfo(session: session, tag: tag)
             break
         case .reloadUser(user: let user, amount: let amount):
-            self.updateUserAccountFundsAvailable(session: session, tag: tag, user: user, amount: amount)
+            await self.updateUserAccountFundsAvailable(session: session, tag: tag, user: user, amount: amount)
             break
         default:
             self.completeNFCSession(message: "No action")
             break
         }
     }
-}
-
-// MARK: - NFCNDEFReaderSessionDelegate
-extension NFCService: NFCNDEFReaderSessionDelegate {
-    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
-        NFCLogger.log("NFC Reader opened")
-    }
-    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
-        // Handle Error
-    }
     
-    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
-        // Do nothing, function not called with declaration of: readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag])
-    }
-
-    
-    func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
-        if tags.count > 1 {
-            session.alertMoreThanOneTag()
-            return
-        }
-        
-        // Connect to the found tag and write an NDEF message to it.
-        if let tag = tags.first {
+    private func connect( session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> Error? {
+        await withCheckedContinuation { continuation in
             session.connect(to: tag, completionHandler: { [weak self] (error: Error?) in
                 guard let self = self else {
                     NFCLogger.error(NFCError.unavailable)
+                    continuation.resume(returning: NFCError.unavailable)
                     return
                 }
                 if let error = error {
                     self.completeNFCSession(.nfcTagError(error: error), message: "Unable to connect")
+                    continuation.resume(returning: error)
                     return
                 }
                 
-                tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
-                    if let error = error {
-                        self.completeNFCSession(.nfcTagError(error: error), message: "Unable to query the NDEF status of tag.")
-                        return
-                    }
-
-                    switch ndefStatus {
-                    case .notSupported:
-                        self.completeNFCSession(.tagNotCompliant, message: "Tag is not NDEF compliant.")
-                        break
-                    case .readOnly:
-                        self.completeNFCSession(.tagReadOnly, message: "Tag is read only")
-                        break
-                    case .readWrite:
-                        self.runAction(session: session, tag: tag)
-                        break
-                    @unknown default:
-                        self.completeNFCSession(.unknown, message: "Unknown error")
-                        break
-                    }
-                })
+                continuation.resume(returning: nil)
             })
-        } else {
-            self.completeNFCSession(.noTagsFound, message: "No tags found, try again")
         }
     }
     
-    func readUserAccountInfo(session: NFCNDEFReaderSession, tag: NFCNDEFTag) {
-        NFCLogger.log("Begin read user")
-        tag.readNDEF(completionHandler: { [weak self] mess, error in
-            guard let self = self else {
-                NFCLogger.error(NFCError.unavailable)
-                return
-            }
-            let noUserMessage = "No user found, follow next steps to write a demo user"
-            if let payload = mess?.records.first {
-                if let user: XealUser = self.decodeStruct(payload) {
-                    self.delegate?.didReadUser(user: user)
-                    session.alertMessage = "Hello \(user.firstName)!"
-                    session.invalidate()
-                } else {
-                    self.completeNFCSession(.userNotFound, message: noUserMessage)
+    private func queryStatus(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> Error? {
+        await withCheckedContinuation { continuation in
+            tag.queryNDEFStatus(completionHandler: { (ndefStatus: NFCNDEFStatus, capacity: Int, error: Error?) in
+                if let error = error {
+                    self.completeNFCSession(.nfcTagError(error: error), message: "Unable to query the NDEF status of tag.")
+                    continuation.resume(returning: error)
+                    return
                 }
-            }
-            else if let _ = error {
-                self.completeNFCSession(.userNotFound, message: noUserMessage)
-                return
-            } else {
-                self.completeNFCSession(.unknown, message: noUserMessage)
-            }
-        })
-    }
-    
-    func updateUserAccountFundsAvailable(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser, amount: ReloadAmount) {
-        NFCLogger.log("Reloading \(amount.dollarString) to \(user.name)")
-        tag.readNDEF(completionHandler: { mess, error in
-            if let error = error {
-                self.completeNFCSession(.nfcTagError(error: error), message: "Failed to read data")
-                return
-            } else if let payload = mess?.records.first {
-                if var tagUser: XealUser = self.decodeStruct(payload), tagUser.id == user.id {
-                    tagUser.accountValue = tagUser.accountValue + amount.value
-                    let message = self.createNewUserMessage(user: tagUser)
-                    tag.writeNDEF(message, completionHandler: { error in
-                        if let error = error {
-                            self.completeNFCSession(.nfcTagError(error: error), message: "Failed to process payment")
-                            return
-                        }
-                        self.delegate?.reloadCompleted(user: tagUser)
-                        self.completeNFCSession(message: "Processed payment!")
-                    })
-                } else {
-                    self.completeNFCSession(.verifyUser, message: "Failed to verify user")
+                
+                switch ndefStatus {
+                case .notSupported:
+                    self.completeNFCSession(.tagNotCompliant, message: "Tag is not NDEF compliant.")
+                    continuation.resume(returning: NFCError.tagNotCompliant)
+                    break
+                case .readOnly:
+                    self.completeNFCSession(.tagReadOnly, message: "Tag is read only")
+                    continuation.resume(returning: NFCError.tagReadOnly)
+                    break
+                case .readWrite:
+                    continuation.resume(returning: nil)
+                    break
+                @unknown default:
+                    self.completeNFCSession(.unknown, message: "Unknown error")
+                    continuation.resume(returning: NFCError.unknown)
+                    break
                 }
-            } else {
-                self.completeNFCSession(.noDataFound, message: "Failed to find user data")
-            }
-        })
+            })
+        }
     }
-    
-    func createNewUserMessage(user: XealUser) -> NFCNDEFMessage {
-       return createNFCNDEFMessage(data: user)
-    }
+
+    // MARK: - Coding
     
     func createNFCNDEFMessage<T: Codable>(data: T) -> NFCNDEFMessage {
         let encodedData = try! JSONEncoder().encode(data)
@@ -192,8 +125,6 @@ extension NFCService: NFCNDEFReaderSessionDelegate {
         let message = NFCNDEFMessage.init(records: [payload])
         return message
     }
-    
-    // MARK: - Coding
     
     /// Decode a data structure from a NFCNDEFPayload
     ///
@@ -210,6 +141,145 @@ extension NFCService: NFCNDEFReaderSessionDelegate {
             return data
         } catch {
             return nil
+        }
+    }
+    
+    private func read(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async -> Result<NFCNDEFPayload, NFCError>  {
+        await withCheckedContinuation { continuation in
+            tag.readNDEF(completionHandler: { mess, error in
+                if let payload = mess?.records.first {
+                    continuation.resume(returning: .success(payload))
+                }
+                else if let error = error {
+                    continuation.resume(returning: .failure(NFCError.nfcTagError(error: error)))
+                    return
+                } else {
+                    continuation.resume(returning: .failure(NFCError.unknown))
+                }
+            })
+        }
+    }
+    
+    private func write<T: Codable>(session: NFCNDEFReaderSession, tag: NFCNDEFTag, data: T) async -> Result<T, NFCError>  {
+        await withCheckedContinuation { continuation in
+            let message = createNFCNDEFMessage(data: data)
+            tag.writeNDEF(message, completionHandler: { error in
+                if let error = error {
+                    continuation.resume(returning: .failure(NFCError.nfcTagError(error: error)))
+                    return
+                } else {
+                    continuation.resume(returning: .success(data))
+                }
+            })
+        }
+    }
+    
+    // MARK: - Actions
+    private func readUserAccountInfo(session: NFCNDEFReaderSession, tag: NFCNDEFTag) async {
+        NFCLogger.log("Begin read user")
+        let result = await read(session: session, tag: tag)
+        let noUserMessage = "No user found, follow next steps to write a demo user"
+        
+        switch result {
+        case .success(let payload):
+            if let user: XealUser = self.decodeStruct(payload) {
+                DispatchQueue.main.async {
+                    self.delegate?.didReadUser(user: user)
+                    session.alertMessage = "Hello \(user.firstName)!"
+                    session.invalidate()
+                }
+                return
+            } else {
+                self.completeNFCSession(.userNotFound, message: noUserMessage)
+                return
+            }
+        case .failure(_):
+            self.completeNFCSession(.userNotFound, message: noUserMessage)
+            return
+        }
+    }
+    
+    private func updateUserAccountFundsAvailable(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser, amount: ReloadAmount) async {
+        NFCLogger.log("Reloading \(amount.dollarString) to \(user.name)")
+        
+        let result = await read(session: session, tag: tag)
+        let noUserMessage = "No user found, follow next steps to write a demo user"
+        
+        switch result {
+        case .success(let payload):
+            if var tagUser: XealUser = self.decodeStruct(payload), tagUser.id == user.id {
+                tagUser.accountValue = tagUser.accountValue + amount.value
+                let result = await write(session: session, tag: tag, data: tagUser)
+                switch result {
+                case .success(let data):
+                    DispatchQueue.main.async {
+                        self.delegate?.reloadCompleted(user: data)
+                    }
+                    self.completeNFCSession(message: "Processed payment!")
+                    break
+                case .failure(let error):
+                    self.completeNFCSession( error, message: "Failed to write updated user data")
+                   break
+                }
+            } else {
+                self.completeNFCSession(.verifyUser, message: "Failed to verify user")
+            }
+            break
+        case .failure(_):
+            self.completeNFCSession(.userNotFound, message: noUserMessage)
+            break
+        }
+    }
+    
+    private func creatUser(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser) async {
+        let result = await write(session: session, tag: tag, data: user)
+        switch result {
+        case .success(let data):
+            DispatchQueue.main.async {
+                self.delegate?.didReadUser(user: data)
+            }
+            self.completeNFCSession(message: "Created new user: \(data.name)!")
+            return
+        case .failure(let error):
+            self.completeNFCSession(error, message: "Failed to create user")
+            return
+        }
+    }
+}
+
+// MARK: - NFCNDEFReaderSessionDelegate
+extension NFCService: NFCNDEFReaderSessionDelegate {
+    func readerSessionDidBecomeActive(_ session: NFCNDEFReaderSession) {
+        NFCLogger.log("NFC Reader opened")
+    }
+    func readerSession(_ session: NFCNDEFReaderSession, didInvalidateWithError error: Error) {
+        // Handle Error
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetectNDEFs messages: [NFCNDEFMessage]) {
+        // Do nothing, function not called with declaration of: readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag])
+    }
+    
+    func readerSession(_ session: NFCNDEFReaderSession, didDetect tags: [NFCNDEFTag]) {
+        if tags.count > 1 {
+            session.alertMoreThanOneTag()
+            return
+        }
+        
+        // Connect to the found tag and write an NDEF message to it.
+        if let tag = tags.first {
+            Task {
+                // Connect to the tag
+                if await self.connect(session: session, tag: tag) == nil {
+                    // Query the tag
+                    if await self.queryStatus(session: session, tag: tag) == nil {
+                        // Perform the action
+                        await self.runAction(session: session, tag: tag)
+                    }
+                }
+            }
+        } else {
+            self.completeNFCSession(.noTagsFound, message: "No tags found, try again")
         }
     }
 }
