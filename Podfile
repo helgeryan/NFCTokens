@@ -1,10 +1,10 @@
 # Uncomment the next line to define a global platform for your project
 # platform :ios, '9.0'
 
-target 'Xeal Challenge App' do
+target 'NFCTokens' do
   # Comment the next line if you don't want to use dynamic frameworks
   use_frameworks!
 
-  # Pods for Xeal Challenge App
+  # Pods for NFCTokens
   pod 'lottie-ios'
 end

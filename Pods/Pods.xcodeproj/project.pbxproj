@@ -25,6 +25,7 @@
 		0ED1D0DA761050EE616E03DB859C6F3A /* Asset.swift in Sources */ = {isa = PBXBuildFile; fileRef = EE92ED7B06A1F62F1F7844DB0173CF11 /* Asset.swift */; };
 		0F8CDE2C827494D5338839D0957437B0 /* ZipEntry.swift in Sources */ = {isa = PBXBuildFile; fileRef = 384C39259BB943BAC795CD3B21BA7BA6 /* ZipEntry.swift */; };
 		0FB9C2DD1438DF8B2BF389E0281A1B84 /* SolidLayerModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E808377C4CC096A8A07C54909CB7F5AF /* SolidLayerModel.swift */; };
+		1091B697272E01461EC679FA8A1CBB91 /* Pods-NFCTokens-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 4B7D10771B653FC3472D9781E2015083 /* Pods-NFCTokens-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		125DF0F7DFE5D0AEE5275621C13E1CA3 /* PathNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EBA50C043F3BF40FE63828E6A615FB3 /* PathNode.swift */; };
 		1407C37D4DF32961606A4EACA2450E4F /* NodePropertyMap.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8248D2040A86C03D3DBA1557768824CC /* NodePropertyMap.swift */; };
 		15E1F7E7EE544A1B8609BB457557BB4C /* LottieAnimationHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBF000C8AA2180F1253FD2E8968D9EF5 /* LottieAnimationHelpers.swift */; };
@@ -52,7 +53,6 @@
 		307EAEBF756F5C1C2B6E35CBCB2A3296 /* SolidCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 60624FD7F9810704806CDC3BC8545FF4 /* SolidCompositionLayer.swift */; };
 		3096B3613816AD193872FB4840738D7F /* UnitBezier.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C4D1295402B046B0ABE2CCE2BB39CF4 /* UnitBezier.swift */; };
 		30EE3C2BE9C569228B4BEC161A483F0D /* DotLottieUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8CF223639A97AA6E0489327D1B190788 /* DotLottieUtils.swift */; };
-		30FF88DFB6B419CCC4956C25549F8A0B /* Pods-Xeal Challenge App-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 97FBF71A791B268F9945F942B61D2CAC /* Pods-Xeal Challenge App-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		31561EB53AF7812F221D54F2FAB19499 /* DefaultAnimationCache.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCCC7ACCEF34C26D66EA1390A9C5ABB /* DefaultAnimationCache.swift */; };
 		3181BAF9303444FD0CCA030A9644C88C /* AnyValueProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 19B272A8D48BD90C15244FD07601B07F /* AnyValueProvider.swift */; };
 		3269B8A9780D237C88F7BAA38C87D145 /* CompatibleAnimationKeypath.swift in Sources */ = {isa = PBXBuildFile; fileRef = C20CC2E0923EC982F91B01E262CD0C25 /* CompatibleAnimationKeypath.swift */; };
@@ -103,7 +103,6 @@
 		6A42FAF59F57F585E4269650E958ED42 /* ValueProviderStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9B63418B725EBCFD8A7A1E540B0190C0 /* ValueProviderStore.swift */; };
 		6B1DAC52E46DB6DA8C9D9D6B5EFB5708 /* RoundedCorners.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3368AFA4506D642D2BACA2B67A8AE50F /* RoundedCorners.swift */; };
 		6B76EF8AB202FFBBBC306CFB2C6CFBED /* AnimationContext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8447651A7E5D95F1849BEEC4281F0CB /* AnimationContext.swift */; };
-		6B96BE290510FC72B97D0EC216466902 /* Pods-Xeal Challenge App-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 430320DE48632376217252E01F9DD5A5 /* Pods-Xeal Challenge App-dummy.m */; };
 		6CA02D047C03F92FD71BAB9E13D744E8 /* StrokeAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 76FCC11F2BB0DC212A67AA15DBE453E2 /* StrokeAnimation.swift */; };
 		6D868CB437BFB83ABC82E1FE3143C50C /* DotLottieManifest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 12985D27EEDE79E3FE7F79990A6F7190 /* DotLottieManifest.swift */; };
 		78BC14D13713B4856BB11CBE2D217426 /* AnyValueContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = EF24CE8F615390C46362051DDE6F8CB7 /* AnyValueContainer.swift */; };
@@ -153,7 +152,6 @@
 		A86EE10258CA23A1CC97FE1D5E961292 /* CGColor+RGB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 47A0ACC83325247DC2D415FC6E7E45BB /* CGColor+RGB.swift */; };
 		A99594138E6CC2CD4E329E8BCCED7779 /* ImageCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 687E19A7683619C11E8D5A6DCC136A79 /* ImageCompositionLayer.swift */; };
 		AB76B571C891660C3F826DF41B998390 /* ShapeCompositionLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 718CFF2887C8D930E9D78481C4498257 /* ShapeCompositionLayer.swift */; };
-		ACA26776EE53631998EA1BE4413AC1FF /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
 		AE73C0962D01F2FDF3C451DEF77BE07E /* DotLottieConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 99FF1B0F3D217BCDA951923A1FF21FFB /* DotLottieConfiguration.swift */; };
 		AF113DD18F06AC69F89591B050F119EB /* DotLottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0776E80E1636C09924E74D5367031EAE /* DotLottieAnimation.swift */; };
 		B0604783E9B7A3ADD1C568B509BA7266 /* AnimationTextProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3AF8D301D8CE54875060D72B14AE6F4 /* AnimationTextProvider.swift */; };
@@ -211,7 +209,9 @@
 		F35E471A26E2406BD756C49EF1A09B41 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
 		F39CD9A549D92F32CC0F5C960921266F /* DotLottieCacheProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 778A489A4557D6FE555A6BBED4D467D4 /* DotLottieCacheProvider.swift */; };
 		F4E57647A8D9A1D735B74190E30DDF99 /* TextAnimatorNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = ED7769CF46A1264AE7BBD961CAC36F83 /* TextAnimatorNode.swift */; };
+		F505123AD59F4BD627E5D41C487F35C0 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79CF7D56C5D50C18B2EA0ED106D998C7 /* Foundation.framework */; };
 		F8FB825FF80317524EF255A96E932FCD /* LottieAnimation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4D96DB4F8B25EA024AB5C0149F206811 /* LottieAnimation.swift */; };
+		F9E4D795D98AB9942A68FCB8903EEA9B /* Pods-NFCTokens-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E3DC7FCEED9DB0C851EF673A423E5DE0 /* Pods-NFCTokens-dummy.m */; };
 		FACF6A27048966B7B5D4AE6784129E62 /* ShapeRenderLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 124705B703566380471666C586AE46D3 /* ShapeRenderLayer.swift */; };
 		FB5455CC68386D9DE5F4CEA471A83608 /* StringExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = CDBF26969CC23215EFE06730B1840BC6 /* StringExtensions.swift */; };
 		FC2C55A1B84CD6FEA5F59DB925154BA8 /* DotLottieImageProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = C31FFBCC039B285C1C05936E0555F551 /* DotLottieImageProvider.swift */; };
@@ -221,7 +221,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
-		3BBFC55BC644E5FBDDA284A868AFCCE2 /* PBXContainerItemProxy */ = {
+		52A5636CFFBC86E7330E79B1ACFD2261 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = BFDFE7DC352907FC980B868725387E98 /* Project object */;
 			proxyType = 1;
@@ -237,7 +237,6 @@
 		02761DE326BD9BBA88014D2A5CD85ED5 /* BundleImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BundleImageProvider.swift; path = Sources/Public/iOS/BundleImageProvider.swift; sourceTree = "<group>"; };
 		03E057C913204E72A0B8972267878F0F /* GroupInterpolator.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GroupInterpolator.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/ValueProviders/GroupInterpolator.swift; sourceTree = "<group>"; };
 		04D60AC13D33197690A05C641925DDDA /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS14.0.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
-		05F902780526E52A4086A07E6E6A4759 /* Pods-Xeal Challenge App-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-Xeal Challenge App-acknowledgements.markdown"; sourceTree = "<group>"; };
 		073EE7439775DC7CB10ABDA53021A6C3 /* ShapeTransform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeTransform.swift; path = Sources/Private/Model/ShapeItems/ShapeTransform.swift; sourceTree = "<group>"; };
 		0776E80E1636C09924E74D5367031EAE /* DotLottieAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieAnimation.swift; path = Sources/Private/Model/DotLottie/DotLottieAnimation.swift; sourceTree = "<group>"; };
 		07A295300134DDB9C23B726945563E25 /* Ellipse.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Ellipse.swift; path = Sources/Private/Model/ShapeItems/Ellipse.swift; sourceTree = "<group>"; };
@@ -266,7 +265,6 @@
 		255ABFACA9C826A0B041908E3D3AAC04 /* ShapeItemLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeItemLayer.swift; path = Sources/Private/CoreAnimation/Layers/ShapeItemLayer.swift; sourceTree = "<group>"; };
 		258E5F630E1FBD63C6AC34E4B5F15C0D /* KeyframeGroup+Extensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "KeyframeGroup+Extensions.swift"; path = "Sources/Private/Utility/Interpolatable/KeyframeGroup+Extensions.swift"; sourceTree = "<group>"; };
 		268BD09CAE8A7954C554694676317BFB /* KeypathSearchable.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeypathSearchable.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/Protocols/KeypathSearchable.swift; sourceTree = "<group>"; };
-		28006F86E7443C08B36B25E90E23B42D /* Pods-Xeal Challenge App.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Xeal Challenge App.debug.xcconfig"; sourceTree = "<group>"; };
 		289BE038D2CC34B0A1784770F6F3B3A1 /* FileManager+ZIP.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "FileManager+ZIP.swift"; path = "Sources/Private/Model/DotLottie/Zip/FileManager+ZIP.swift"; sourceTree = "<group>"; };
 		2C4D1295402B046B0ABE2CCE2BB39CF4 /* UnitBezier.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = UnitBezier.swift; path = Sources/Private/Utility/Primitives/UnitBezier.swift; sourceTree = "<group>"; };
 		2F806E1C9AD2A4CACB8CE09B0BB1D5E4 /* CombinedShapeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CombinedShapeAnimation.swift; path = Sources/Private/CoreAnimation/Animations/CombinedShapeAnimation.swift; sourceTree = "<group>"; };
@@ -274,9 +272,7 @@
 		307CF4BCCCB7BD4BF98792049A5C53E8 /* ImageLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayer.swift; path = Sources/Private/CoreAnimation/Layers/ImageLayer.swift; sourceTree = "<group>"; };
 		30F72209734E9D5364C86EB6096E9075 /* PathElement.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathElement.swift; path = Sources/Private/Utility/Primitives/PathElement.swift; sourceTree = "<group>"; };
 		3138362C4406359E3787DBEA8F4ACB2C /* RenderNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RenderNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Protocols/RenderNode.swift; sourceTree = "<group>"; };
-		320ECFB9360D9B7BDC238B81642FF25F /* Pods-Xeal Challenge App.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-Xeal Challenge App.modulemap"; sourceTree = "<group>"; };
 		3368AFA4506D642D2BACA2B67A8AE50F /* RoundedCorners.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RoundedCorners.swift; path = Sources/Private/Model/ShapeItems/RoundedCorners.swift; sourceTree = "<group>"; };
-		33F5B5777B27D5819346974634C82544 /* Pods-Xeal Challenge App-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-Xeal Challenge App-frameworks.sh"; sourceTree = "<group>"; };
 		35B4CD79DECF85D6822A160881EDD5E8 /* GradientFill.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientFill.swift; path = Sources/Private/Model/ShapeItems/GradientFill.swift; sourceTree = "<group>"; };
 		360D8582CE8CE86BCB41A96B01C1DBDF /* RectangleAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RectangleAnimation.swift; path = Sources/Private/CoreAnimation/Animations/RectangleAnimation.swift; sourceTree = "<group>"; };
 		36FD1557904AD2FA9515EE1296AF7AB2 /* AnimationKeypathExtension.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypathExtension.swift; path = Sources/Private/Utility/Extensions/AnimationKeypathExtension.swift; sourceTree = "<group>"; };
@@ -288,12 +284,13 @@
 		3C73834A6D9DF2A814BEFA68312E4B05 /* PrecompAsset.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PrecompAsset.swift; path = Sources/Private/Model/Assets/PrecompAsset.swift; sourceTree = "<group>"; };
 		3D2C4B2FA4FAE354737584EA8B58F8B0 /* PreCompLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PreCompLayerModel.swift; path = Sources/Private/Model/Layers/PreCompLayerModel.swift; sourceTree = "<group>"; };
 		4141D7D7F7C3063E12AFBE62C3A71FEE /* KeyframeData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = KeyframeData.swift; path = Sources/Private/Model/Keyframes/KeyframeData.swift; sourceTree = "<group>"; };
-		430320DE48632376217252E01F9DD5A5 /* Pods-Xeal Challenge App-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-Xeal Challenge App-dummy.m"; sourceTree = "<group>"; };
 		45628A136106F88F8B0F58B1F82788B2 /* PathOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathOutputNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/OutputNodes/PathOutputNode.swift; sourceTree = "<group>"; };
+		476CB0F45DCC5237053DD27F3AA82385 /* Pods-NFCTokens.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFCTokens.release.xcconfig"; sourceTree = "<group>"; };
 		478BCCD986447750AEF8D1D23373E5AF /* lottie-ios.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.debug.xcconfig"; sourceTree = "<group>"; };
 		47A0ACC83325247DC2D415FC6E7E45BB /* CGColor+RGB.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CGColor+RGB.swift"; path = "Sources/Private/Utility/Extensions/CGColor+RGB.swift"; sourceTree = "<group>"; };
 		4A8DC2EB476E5CEC18698994BF4C73D1 /* EllipseAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseAnimation.swift; path = Sources/Private/CoreAnimation/Animations/EllipseAnimation.swift; sourceTree = "<group>"; };
 		4B6D8528735BD6AF103CCDA242D487A3 /* GradientRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientRenderLayer.swift; path = Sources/Private/CoreAnimation/Layers/GradientRenderLayer.swift; sourceTree = "<group>"; };
+		4B7D10771B653FC3472D9781E2015083 /* Pods-NFCTokens-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-NFCTokens-umbrella.h"; sourceTree = "<group>"; };
 		4C8905FCC838BC1607C4DF2C614A4D95 /* BezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = BezierPath.swift; path = Sources/Private/Utility/Primitives/BezierPath.swift; sourceTree = "<group>"; };
 		4D96DB4F8B25EA024AB5C0149F206811 /* LottieAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieAnimation.swift; path = Sources/Public/Animation/LottieAnimation.swift; sourceTree = "<group>"; };
 		4ED50321196D00DBD875FE73B8540C83 /* MainThreadAnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = MainThreadAnimationLayer.swift; path = Sources/Private/MainThread/LayerContainers/MainThreadAnimationLayer.swift; sourceTree = "<group>"; };
@@ -302,7 +299,7 @@
 		50ED4C8CB45D48B294BBFF7BD252D01E /* TrimPathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TrimPathNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/ModifierNodes/TrimPathNode.swift; sourceTree = "<group>"; };
 		5157FBAD3A2001B10ABFF812A5AE0DE1 /* AssetLibrary.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AssetLibrary.swift; path = Sources/Private/Model/Assets/AssetLibrary.swift; sourceTree = "<group>"; };
 		51A130656211C204189315DF2050C416 /* Merge.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Merge.swift; path = Sources/Private/Model/ShapeItems/Merge.swift; sourceTree = "<group>"; };
-		51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "lottie-ios"; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Lottie.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		5237035C5F7CDB12CA89976E4C106225 /* Repeater.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Repeater.swift; path = Sources/Private/Model/ShapeItems/Repeater.swift; sourceTree = "<group>"; };
 		5245D2DD6E838574A25D3ABA23999DBD /* TextLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayerModel.swift; path = Sources/Private/Model/Layers/TextLayerModel.swift; sourceTree = "<group>"; };
 		5351A8AF7651A0E92D33B3588688A033 /* lottie-ios-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-umbrella.h"; sourceTree = "<group>"; };
@@ -313,6 +310,7 @@
 		57E547A46034037F60F2C149F6C46EAD /* CALayer+fillBounds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CALayer+fillBounds.swift"; path = "Sources/Private/CoreAnimation/Extensions/CALayer+fillBounds.swift"; sourceTree = "<group>"; };
 		57ED67688048C9B74D9E59212BF14972 /* TestHelpers.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TestHelpers.swift; path = Sources/Private/Utility/Debugging/TestHelpers.swift; sourceTree = "<group>"; };
 		581C49FE247BBF4A4421539BFD6FBED0 /* CompoundBezierPath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompoundBezierPath.swift; path = Sources/Private/Utility/Primitives/CompoundBezierPath.swift; sourceTree = "<group>"; };
+		58228D656EE3393DA1350E9605DB56B6 /* Pods-NFCTokens.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-NFCTokens.debug.xcconfig"; sourceTree = "<group>"; };
 		58C86A3B823F365C61B04AD5D938A9A4 /* PassThroughOutputNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PassThroughOutputNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/OutputNodes/PassThroughOutputNode.swift; sourceTree = "<group>"; };
 		5A4183DA4EFFE90C6A04C7962A2431CB /* AnimationLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationLayer.swift; path = Sources/Private/CoreAnimation/Layers/AnimationLayer.swift; sourceTree = "<group>"; };
 		5C6F37794D6AC0E2B420E549164B97A5 /* Data+Compression.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Data+Compression.swift"; path = "Sources/Private/Model/DotLottie/Zip/Data+Compression.swift"; sourceTree = "<group>"; };
@@ -347,6 +345,7 @@
 		7E7E9B5E415EA120FB1657E3DDD80BBD /* AnimationSubview.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationSubview.swift; path = Sources/Public/iOS/AnimationSubview.swift; sourceTree = "<group>"; };
 		7EB7441180171B5057F71B171EB719FA /* Rectangle.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Rectangle.swift; path = Sources/Private/Model/ShapeItems/Rectangle.swift; sourceTree = "<group>"; };
 		7F0300FDDBDCBC2C923136574D446360 /* SizeValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SizeValueProvider.swift; path = Sources/Public/DynamicProperties/ValueProviders/SizeValueProvider.swift; sourceTree = "<group>"; };
+		823A506B09986C715B5E4744601D5A31 /* Pods-NFCTokens-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-NFCTokens-frameworks.sh"; sourceTree = "<group>"; };
 		8248D2040A86C03D3DBA1557768824CC /* NodePropertyMap.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = NodePropertyMap.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/Protocols/NodePropertyMap.swift; sourceTree = "<group>"; };
 		836BB69F5A8570B835C985806FBE85C8 /* AnimationKeypath.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationKeypath.swift; path = Sources/Public/DynamicProperties/AnimationKeypath.swift; sourceTree = "<group>"; };
 		83AF3E9C2E83F6B229CDF646EDF1D00F /* GradientStrokeRenderer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = GradientStrokeRenderer.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/OutputNodes/Renderables/GradientStrokeRenderer.swift; sourceTree = "<group>"; };
@@ -365,12 +364,12 @@
 		92DEE9E781E4DF6BF483227584712739 /* Keyframe.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Keyframe.swift; path = Sources/Public/Keyframes/Keyframe.swift; sourceTree = "<group>"; };
 		9305EC807CF6D1916B33EEA91A341B77 /* RepeaterLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = RepeaterLayer.swift; path = Sources/Private/CoreAnimation/Layers/RepeaterLayer.swift; sourceTree = "<group>"; };
 		954C3B29C14D31710BBBA181BAAAC122 /* Trim.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Trim.swift; path = Sources/Private/Model/ShapeItems/Trim.swift; sourceTree = "<group>"; };
+		95EB7DC715BBC251E0D4EC76022E3BCD /* Pods-NFCTokens-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-NFCTokens-acknowledgements.markdown"; sourceTree = "<group>"; };
 		963E4FBF5E342EA12BC53FC5F97AA497 /* ImageLayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ImageLayerModel.swift; path = Sources/Private/Model/Layers/ImageLayerModel.swift; sourceTree = "<group>"; };
-		97FBF71A791B268F9945F942B61D2CAC /* Pods-Xeal Challenge App-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-Xeal Challenge App-umbrella.h"; sourceTree = "<group>"; };
-		99911258FB85DCA4B5431BE8374762A2 /* Pods-Xeal Challenge App-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Xeal Challenge App-acknowledgements.plist"; sourceTree = "<group>"; };
 		99FF1B0F3D217BCDA951923A1FF21FFB /* DotLottieConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieConfiguration.swift; path = Sources/Private/Model/DotLottie/DotLottieConfiguration.swift; sourceTree = "<group>"; };
+		9B194D314092C75415565BEB6EDC7ED3 /* Pods-NFCTokens-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFCTokens-Info.plist"; sourceTree = "<group>"; };
 		9B63418B725EBCFD8A7A1E540B0190C0 /* ValueProviderStore.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ValueProviderStore.swift; path = Sources/Private/CoreAnimation/ValueProviderStore.swift; sourceTree = "<group>"; };
-		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		9D940727FF8FB9C785EB98E56350EF41 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; indentWidth = 2; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; tabWidth = 2; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
 		9DCBD82B0F6E8099FCFF84C25DBB4B91 /* SingleValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = SingleValueProvider.swift; path = Sources/Private/MainThread/NodeRenderSystem/NodeProperties/ValueProviders/SingleValueProvider.swift; sourceTree = "<group>"; };
 		9E33E4C05F5BD7D9A1C5C7389BA35418 /* DotLottieFile.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DotLottieFile.swift; path = Sources/Public/DotLottie/DotLottieFile.swift; sourceTree = "<group>"; };
 		9EBA50C043F3BF40FE63828E6A615FB3 /* PathNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = PathNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Protocols/PathNode.swift; sourceTree = "<group>"; };
@@ -384,6 +383,7 @@
 		A5D68369C1DB7EEFBF863202FDD89FB9 /* CAAnimation+TimingConfiguration.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "CAAnimation+TimingConfiguration.swift"; path = "Sources/Private/CoreAnimation/Animations/CAAnimation+TimingConfiguration.swift"; sourceTree = "<group>"; };
 		A61C13F3323EFEA8EB182F9212847097 /* lottie-ios.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "lottie-ios.release.xcconfig"; sourceTree = "<group>"; };
 		A680213CB10B56CC4E3701B0791EB0C8 /* LayerModel.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerModel.swift; path = Sources/Private/Model/Layers/LayerModel.swift; sourceTree = "<group>"; };
+		A797B29ACB483D1C08F886F4AD9DFFA7 /* Pods-NFCTokens */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-NFCTokens"; path = Pods_NFCTokens.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A956E0541BBF80A010B71881E3F1DF5C /* ShapeContainerLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeContainerLayer.swift; path = Sources/Private/MainThread/NodeRenderSystem/RenderLayers/ShapeContainerLayer.swift; sourceTree = "<group>"; };
 		AD0CCB8B2A8CEDEAF345B49A2BFBDD9E /* AnimatedButton.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedButton.swift; path = Sources/Public/iOS/AnimatedButton.swift; sourceTree = "<group>"; };
 		B0DC5D6F96A5F9180A85FD2A95D262FC /* lottie-ios-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "lottie-ios-dummy.m"; sourceTree = "<group>"; };
@@ -412,15 +412,14 @@
 		C708C27FE8E7312FA3CA05317A6BA0F7 /* lottie-ios.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "lottie-ios.modulemap"; sourceTree = "<group>"; };
 		C78750545C399EC92696CC1552CDB66F /* EllipseNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = EllipseNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/PathNodes/EllipseNode.swift; sourceTree = "<group>"; };
 		C9C6DE3D62E6F66D52BCD1D0E4955E6B /* InterpolatableExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = InterpolatableExtensions.swift; path = Sources/Private/Utility/Interpolatable/InterpolatableExtensions.swift; sourceTree = "<group>"; };
+		CB7C3EBBE62CE727B95EFEBDF9D0949B /* Pods-NFCTokens-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-NFCTokens-acknowledgements.plist"; sourceTree = "<group>"; };
 		CDBF26969CC23215EFE06730B1840BC6 /* StringExtensions.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StringExtensions.swift; path = Sources/Private/Utility/Extensions/StringExtensions.swift; sourceTree = "<group>"; };
 		D1127232DB84D3C900673F1AE68DDD6A /* lottie-ios-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "lottie-ios-prefix.pch"; sourceTree = "<group>"; };
 		D16C3C01A6DE7B658B90FC03AA485EA7 /* AnimationImageProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimationImageProvider.swift; path = Sources/Public/ImageProvider/AnimationImageProvider.swift; sourceTree = "<group>"; };
 		D2C95C91B3205F0B2E0406A4C2C65BA4 /* CompositionLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompositionLayer.swift; path = Sources/Private/MainThread/LayerContainers/CompLayers/CompositionLayer.swift; sourceTree = "<group>"; };
-		D386B9E918109981CDB4E214039F38DF /* Pods-Xeal Challenge App-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-Xeal Challenge App-Info.plist"; sourceTree = "<group>"; };
 		D4DD3AEFBB9EA382A7AC535299BECE8C /* LayerFontProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerFontProvider.swift; path = Sources/Private/MainThread/LayerContainers/Utility/LayerFontProvider.swift; sourceTree = "<group>"; };
 		D5F8911A35DD9CA3C0D46ADD0899584B /* TextLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = TextLayer.swift; path = Sources/Private/CoreAnimation/Layers/TextLayer.swift; sourceTree = "<group>"; };
 		D61F5B7C2FBFDBE6E1B194738533A8EE /* LayerProperty.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LayerProperty.swift; path = Sources/Private/CoreAnimation/Animations/LayerProperty.swift; sourceTree = "<group>"; };
-		D8DAA25ECCD05AEC481A5770C42B469F /* Pods-Xeal Challenge App.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-Xeal Challenge App.release.xcconfig"; sourceTree = "<group>"; };
 		DA50E9F83F21AF4A4CFD9F598EB0BA47 /* ShapeAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ShapeAnimation.swift; path = Sources/Private/CoreAnimation/Animations/ShapeAnimation.swift; sourceTree = "<group>"; };
 		DB25E921D8866866FE12DCE113277B8B /* LottieAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = LottieAnimationCache.swift; path = Sources/Public/AnimationCache/LottieAnimationCache.swift; sourceTree = "<group>"; };
 		DB626B394D141E5B7DC1D3A49D9D42FB /* CoreTextRenderLayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CoreTextRenderLayer.swift; path = Sources/Private/MainThread/LayerContainers/Utility/CoreTextRenderLayer.swift; sourceTree = "<group>"; };
@@ -428,6 +427,7 @@
 		DC7E582257DAD92203479D3403DAB269 /* AnimatedControl.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedControl.swift; path = Sources/Public/iOS/AnimatedControl.swift; sourceTree = "<group>"; };
 		DCCCC7ACCEF34C26D66EA1390A9C5ABB /* DefaultAnimationCache.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = DefaultAnimationCache.swift; path = Sources/Public/AnimationCache/DefaultAnimationCache.swift; sourceTree = "<group>"; };
 		E0CF3AD32FAF314B3A8ACD094A13E080 /* Transform.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Transform.swift; path = Sources/Private/Model/Objects/Transform.swift; sourceTree = "<group>"; };
+		E3DC7FCEED9DB0C851EF673A423E5DE0 /* Pods-NFCTokens-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-NFCTokens-dummy.m"; sourceTree = "<group>"; };
 		E68E7D494A59BD4822C7C29A018C65CB /* StrokeNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StrokeNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/RenderNodes/StrokeNode.swift; sourceTree = "<group>"; };
 		E6E7DC6E9BA2DEAAC7BCFE55B6271159 /* Marker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Marker.swift; path = Sources/Private/Model/Objects/Marker.swift; sourceTree = "<group>"; };
 		E736EF1CD3C7025633698742C65F56FB /* VisibilityAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = VisibilityAnimation.swift; path = Sources/Private/CoreAnimation/Animations/VisibilityAnimation.swift; sourceTree = "<group>"; };
@@ -450,20 +450,20 @@
 		F4A759D91AAF5816578ABBEB4EF18EF5 /* Vectors.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Vectors.swift; path = Sources/Public/Primitives/Vectors.swift; sourceTree = "<group>"; };
 		F55044353B79ED7FE9CE7E503DAD6C73 /* AnimatorNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatorNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Protocols/AnimatorNode.swift; sourceTree = "<group>"; };
 		F60721B2354E5AA0FFC84798E07F5251 /* CompatibilityTracker.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CompatibilityTracker.swift; path = Sources/Private/CoreAnimation/CompatibilityTracker.swift; sourceTree = "<group>"; };
+		F76F98C25FF11EB9F6E87EFAC5C4F2A7 /* Pods-NFCTokens.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-NFCTokens.modulemap"; sourceTree = "<group>"; };
 		F985711CB24E45D7D5CE5C4F547B42F6 /* Keyframes+combined.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = "Keyframes+combined.swift"; path = "Sources/Private/CoreAnimation/Extensions/Keyframes+combined.swift"; sourceTree = "<group>"; };
 		F9A7BE6ACE18D632A1B95004CED9D9AF /* CustomPathAnimation.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = CustomPathAnimation.swift; path = Sources/Private/CoreAnimation/Animations/CustomPathAnimation.swift; sourceTree = "<group>"; };
-		FC69833C4D0ABAA78867F3C043F1FDD8 /* Pods-Xeal Challenge App */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; name = "Pods-Xeal Challenge App"; path = Pods_Xeal_Challenge_App.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		FD4403A6B352ABDDE87FC256519C9A28 /* FloatValueProvider.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = FloatValueProvider.swift; path = Sources/Public/DynamicProperties/ValueProviders/FloatValueProvider.swift; sourceTree = "<group>"; };
 		FEA2E9241D7BACD02D3C98253ADCB3D4 /* StarNode.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = StarNode.swift; path = Sources/Private/MainThread/NodeRenderSystem/Nodes/PathNodes/StarNode.swift; sourceTree = "<group>"; };
 		FF49C62C2B8BFE5EE627A4CFEB5717FB /* AnimatedSwitch.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = AnimatedSwitch.swift; path = Sources/Public/iOS/AnimatedSwitch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
-		349C57ADC16DC4627B6FC867DF4C58AF /* Frameworks */ = {
+		28A299C2EE281F61A533894CB64BB6AB /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				ACA26776EE53631998EA1BE4413AC1FF /* Foundation.framework in Frameworks */,
+				F505123AD59F4BD627E5D41C487F35C0 /* Foundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -696,42 +696,41 @@
 				7D567EDADABC32564CFE51515973A6B4 /* ZipEntry+ZIP64.swift */,
 				EB72ECE8D33CD772BC2B63846FCF9434 /* Support Files */,
 			);
-			name = "lottie-ios";
 			path = "lottie-ios";
 			sourceTree = "<group>";
 		};
-		51F92AB118F6AA2F5C5FC15E7A6831F1 /* Pods-Xeal Challenge App */ = {
+		A61EED071535D309EE84A68703426714 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				320ECFB9360D9B7BDC238B81642FF25F /* Pods-Xeal Challenge App.modulemap */,
-				05F902780526E52A4086A07E6E6A4759 /* Pods-Xeal Challenge App-acknowledgements.markdown */,
-				99911258FB85DCA4B5431BE8374762A2 /* Pods-Xeal Challenge App-acknowledgements.plist */,
-				430320DE48632376217252E01F9DD5A5 /* Pods-Xeal Challenge App-dummy.m */,
-				33F5B5777B27D5819346974634C82544 /* Pods-Xeal Challenge App-frameworks.sh */,
-				D386B9E918109981CDB4E214039F38DF /* Pods-Xeal Challenge App-Info.plist */,
-				97FBF71A791B268F9945F942B61D2CAC /* Pods-Xeal Challenge App-umbrella.h */,
-				28006F86E7443C08B36B25E90E23B42D /* Pods-Xeal Challenge App.debug.xcconfig */,
-				D8DAA25ECCD05AEC481A5770C42B469F /* Pods-Xeal Challenge App.release.xcconfig */,
+				51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */,
+				A797B29ACB483D1C08F886F4AD9DFFA7 /* Pods-NFCTokens */,
 			);
-			name = "Pods-Xeal Challenge App";
-			path = "Target Support Files/Pods-Xeal Challenge App";
+			name = Products;
 			sourceTree = "<group>";
 		};
-		651DB918F97ED4304BEF7769548B3E49 /* Targets Support Files */ = {
+		A86CB2E328D28029ED9C4EB8DFF623C2 /* Targets Support Files */ = {
 			isa = PBXGroup;
 			children = (
-				51F92AB118F6AA2F5C5FC15E7A6831F1 /* Pods-Xeal Challenge App */,
+				AA0DC905FD4401658A25B7718B8321E4 /* Pods-NFCTokens */,
 			);
 			name = "Targets Support Files";
 			sourceTree = "<group>";
 		};
-		9159D9EB0D1FF4AA8AE9A19D8AB38D23 /* Products */ = {
+		AA0DC905FD4401658A25B7718B8321E4 /* Pods-NFCTokens */ = {
 			isa = PBXGroup;
 			children = (
-				51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */,
-				FC69833C4D0ABAA78867F3C043F1FDD8 /* Pods-Xeal Challenge App */,
+				F76F98C25FF11EB9F6E87EFAC5C4F2A7 /* Pods-NFCTokens.modulemap */,
+				95EB7DC715BBC251E0D4EC76022E3BCD /* Pods-NFCTokens-acknowledgements.markdown */,
+				CB7C3EBBE62CE727B95EFEBDF9D0949B /* Pods-NFCTokens-acknowledgements.plist */,
+				E3DC7FCEED9DB0C851EF673A423E5DE0 /* Pods-NFCTokens-dummy.m */,
+				823A506B09986C715B5E4744601D5A31 /* Pods-NFCTokens-frameworks.sh */,
+				9B194D314092C75415565BEB6EDC7ED3 /* Pods-NFCTokens-Info.plist */,
+				4B7D10771B653FC3472D9781E2015083 /* Pods-NFCTokens-umbrella.h */,
+				58228D656EE3393DA1350E9605DB56B6 /* Pods-NFCTokens.debug.xcconfig */,
+				476CB0F45DCC5237053DD27F3AA82385 /* Pods-NFCTokens.release.xcconfig */,
 			);
-			name = Products;
+			name = "Pods-NFCTokens";
+			path = "Target Support Files/Pods-NFCTokens";
 			sourceTree = "<group>";
 		};
 		BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */ = {
@@ -748,8 +747,8 @@
 				9D940727FF8FB9C785EB98E56350EF41 /* Podfile */,
 				BA4F31F07263C99FC76E66D632A59F09 /* Frameworks */,
 				06F807F1841E7717A3F55DC4F3782C90 /* Pods */,
-				9159D9EB0D1FF4AA8AE9A19D8AB38D23 /* Products */,
-				651DB918F97ED4304BEF7769548B3E49 /* Targets Support Files */,
+				A61EED071535D309EE84A68703426714 /* Products */,
+				A86CB2E328D28029ED9C4EB8DFF623C2 /* Targets Support Files */,
 			);
 			sourceTree = "<group>";
 		};
@@ -790,11 +789,11 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		CE9290E2A9C4391DAE23ECC38B5F243C /* Headers */ = {
+		958D93AAC11D631CEB67D5A8376C4D41 /* Headers */ = {
 			isa = PBXHeadersBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				30FF88DFB6B419CCC4956C25549F8A0B /* Pods-Xeal Challenge App-umbrella.h in Headers */,
+				1091B697272E01461EC679FA8A1CBB91 /* Pods-NFCTokens-umbrella.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -816,26 +815,26 @@
 			);
 			name = "lottie-ios";
 			productName = Lottie;
-			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* lottie-ios */;
+			productReference = 51BA97E8B5085EFFB47BC9C0B785CEA7 /* Lottie.framework */;
 			productType = "com.apple.product-type.framework";
 		};
-		9F2A716A0BDAE3D37A8F3DC1D305E60A /* Pods-Xeal Challenge App */ = {
+		1E6BB3329969203E8875D1E79049E70A /* Pods-NFCTokens */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = A1BCADFE9AA599397FFEAE3E3FFC4D3F /* Build configuration list for PBXNativeTarget "Pods-Xeal Challenge App" */;
+			buildConfigurationList = E5F6BFDDB06DC7B5CD57B7C899650DD1 /* Build configuration list for PBXNativeTarget "Pods-NFCTokens" */;
 			buildPhases = (
-				CE9290E2A9C4391DAE23ECC38B5F243C /* Headers */,
-				C22A805C1A0A2E93E26B0EF7D7922422 /* Sources */,
-				349C57ADC16DC4627B6FC867DF4C58AF /* Frameworks */,
-				092CB1265EC8DC36C9DD3C838C3D4597 /* Resources */,
+				958D93AAC11D631CEB67D5A8376C4D41 /* Headers */,
+				FC7F735D5860D7380389A12791E68556 /* Sources */,
+				28A299C2EE281F61A533894CB64BB6AB /* Frameworks */,
+				8138BEEA73ACE96D0B13414C407DA3C1 /* Resources */,
 			);
 			buildRules = (
 			);
 			dependencies = (
-				8EE9A273DE199CE9E696756F60BA6F0A /* PBXTargetDependency */,
+				17BD3BC65C4E79C613C6E90B26E7A42C /* PBXTargetDependency */,
 			);
-			name = "Pods-Xeal Challenge App";
-			productName = Pods_Xeal_Challenge_App;
-			productReference = FC69833C4D0ABAA78867F3C043F1FDD8 /* Pods-Xeal Challenge App */;
+			name = "Pods-NFCTokens";
+			productName = Pods_NFCTokens;
+			productReference = A797B29ACB483D1C08F886F4AD9DFFA7 /* Pods-NFCTokens */;
 			productType = "com.apple.product-type.framework";
 		};
 /* End PBXNativeTarget section */
@@ -844,8 +843,8 @@
 		BFDFE7DC352907FC980B868725387E98 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1300;
-				LastUpgradeCheck = 1300;
+				LastSwiftUpdateCheck = 1500;
+				LastUpgradeCheck = 1500;
 			};
 			buildConfigurationList = 4821239608C13582E20E6DA73FD5F1F9 /* Build configuration list for PBXProject "Pods" */;
 			compatibilityVersion = "Xcode 14.0";
@@ -856,18 +855,18 @@
 				en,
 			);
 			mainGroup = CF1408CF629C7361332E53B88F7BD30C;
-			productRefGroup = 9159D9EB0D1FF4AA8AE9A19D8AB38D23 /* Products */;
+			productRefGroup = A61EED071535D309EE84A68703426714 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
 				0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */,
-				9F2A716A0BDAE3D37A8F3DC1D305E60A /* Pods-Xeal Challenge App */,
+				1E6BB3329969203E8875D1E79049E70A /* Pods-NFCTokens */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
-		092CB1265EC8DC36C9DD3C838C3D4597 /* Resources */ = {
+		8138BEEA73ACE96D0B13414C407DA3C1 /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -1094,22 +1093,22 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
-		C22A805C1A0A2E93E26B0EF7D7922422 /* Sources */ = {
+		FC7F735D5860D7380389A12791E68556 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				6B96BE290510FC72B97D0EC216466902 /* Pods-Xeal Challenge App-dummy.m in Sources */,
+				F9E4D795D98AB9942A68FCB8903EEA9B /* Pods-NFCTokens-dummy.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
-		8EE9A273DE199CE9E696756F60BA6F0A /* PBXTargetDependency */ = {
+		17BD3BC65C4E79C613C6E90B26E7A42C /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			name = "lottie-ios";
 			target = 0B967D7F8561D42493EE289EC8D450D1 /* lottie-ios */;
-			targetProxy = 3BBFC55BC644E5FBDDA284A868AFCCE2 /* PBXContainerItemProxy */;
+			targetProxy = 52A5636CFFBC86E7330E79B1ACFD2261 /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
 
@@ -1176,9 +1175,9 @@
 			};
 			name = Release;
 		};
-		62A4B1CE7DFFB0192DF9B0F4F1FD59C9 /* Release */ = {
+		5317CBC34E5E009996152F22BBA1AA7E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = D8DAA25ECCD05AEC481A5770C42B469F /* Pods-Xeal Challenge App.release.xcconfig */;
+			baseConfigurationReference = 58228D656EE3393DA1350E9605DB56B6 /* Pods-NFCTokens.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
 				CLANG_ENABLE_OBJC_WEAK = NO;
@@ -1190,7 +1189,7 @@
 				DYLIB_COMPATIBILITY_VERSION = 1;
 				DYLIB_CURRENT_VERSION = 1;
 				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App-Info.plist";
+				INFOPLIST_FILE = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
 				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1199,7 +1198,44 @@
 					"@loader_path/Frameworks",
 				);
 				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App.modulemap";
+				MODULEMAP_FILE = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens.modulemap";
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		72994CB42E1655BEB7032F80FD971122 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 476CB0F45DCC5237053DD27F3AA82385 /* Pods-NFCTokens.release.xcconfig */;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_OBJC_WEAK = NO;
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens-Info.plist";
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MACH_O_TYPE = staticlib;
+				MODULEMAP_FILE = "Target Support Files/Pods-NFCTokens/Pods-NFCTokens.modulemap";
 				OTHER_LDFLAGS = "";
 				OTHER_LIBTOOLFLAGS = "";
 				PODS_ROOT = "$(SRCROOT)";
@@ -1230,7 +1266,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1243,43 +1279,6 @@
 				SKIP_INSTALL = YES;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) ";
 				SWIFT_VERSION = 5.5;
-				TARGETED_DEVICE_FAMILY = "1,2";
-				VERSIONING_SYSTEM = "apple-generic";
-				VERSION_INFO_PREFIX = "";
-			};
-			name = Debug;
-		};
-		A62B6986444949078376B2786D8BB1CC /* Debug */ = {
-			isa = XCBuildConfiguration;
-			baseConfigurationReference = 28006F86E7443C08B36B25E90E23B42D /* Pods-Xeal Challenge App.debug.xcconfig */;
-			buildSettings = {
-				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
-				CLANG_ENABLE_OBJC_WEAK = NO;
-				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
-				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
-				CURRENT_PROJECT_VERSION = 1;
-				DEFINES_MODULE = YES;
-				DYLIB_COMPATIBILITY_VERSION = 1;
-				DYLIB_CURRENT_VERSION = 1;
-				DYLIB_INSTALL_NAME_BASE = "@rpath";
-				INFOPLIST_FILE = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App-Info.plist";
-				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 16.0;
-				LD_RUNPATH_SEARCH_PATHS = (
-					"$(inherited)",
-					"@executable_path/Frameworks",
-					"@loader_path/Frameworks",
-				);
-				MACH_O_TYPE = staticlib;
-				MODULEMAP_FILE = "Target Support Files/Pods-Xeal Challenge App/Pods-Xeal Challenge App.modulemap";
-				OTHER_LDFLAGS = "";
-				OTHER_LIBTOOLFLAGS = "";
-				PODS_ROOT = "$(SRCROOT)";
-				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
-				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
-				SDKROOT = iphoneos;
-				SKIP_INSTALL = YES;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
@@ -1302,7 +1301,7 @@
 				GCC_PREFIX_HEADER = "Target Support Files/lottie-ios/lottie-ios-prefix.pch";
 				INFOPLIST_FILE = "Target Support Files/lottie-ios/lottie-ios-Info.plist";
 				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
-				IPHONEOS_DEPLOYMENT_TARGET = 11.0;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -1400,20 +1399,20 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		A1BCADFE9AA599397FFEAE3E3FFC4D3F /* Build configuration list for PBXNativeTarget "Pods-Xeal Challenge App" */ = {
-			isa = XCConfigurationList;
-			buildConfigurations = (
-				A62B6986444949078376B2786D8BB1CC /* Debug */,
-				62A4B1CE7DFFB0192DF9B0F4F1FD59C9 /* Release */,
-			);
-			defaultConfigurationIsVisible = 0;
-			defaultConfigurationName = Release;
-		};
 		DE2C576B7336939835EE0110242C46CD /* Build configuration list for PBXNativeTarget "lottie-ios" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				A091ADAE791305476A554F0C16E17318 /* Debug */,
 				B8BB367E4E239F0964C2CFCECBAB454D /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E5F6BFDDB06DC7B5CD57B7C899650DD1 /* Build configuration list for PBXNativeTarget "Pods-NFCTokens" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5317CBC34E5E009996152F22BBA1AA7E /* Debug */,
+				72994CB42E1655BEB7032F80FD971122 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
