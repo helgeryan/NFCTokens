@@ -10,8 +10,8 @@ import CoreNFC
 
 // MARK: - HomeViewModelDelegate
 protocol HomeViewModelDelegate {
-    func userUpdated(_ user: XealUser)
-    func paymentSuccess(_ user: XealUser)
+    func userUpdated(_ user: NFCUser)
+    func paymentSuccess(_ user: NFCUser)
     func noUserFound()
 }
 
@@ -20,7 +20,7 @@ class HomeViewModel: NSObject {
     let nfcService: NFCService = NFCService()
     
     // MARK: - Properties
-    var currUser: XealUser?
+    var currUser: NFCUser?
     var selectedReloadAmount: ReloadAmount?
     var delegate: HomeViewModelDelegate?
     
@@ -33,7 +33,7 @@ class HomeViewModel: NSObject {
     }
     
     func doCreateNewUser() {
-        let user = XealUser(firstName: "Amanda", lastName: "Gonzalez", accountValue: 0.00, id: 1)
+        let user = NFCUser(firstName: "Amanda", lastName: "Gonzalez", accountValue: 0.00, id: 1)
         setupSession(action: .createUser(user: user))
     }
     
@@ -48,12 +48,12 @@ class HomeViewModel: NSObject {
 }
 
 extension HomeViewModel: NFCServiceDelegate {
-    func reloadCompleted(user: XealUser) {
+    func reloadCompleted(user: NFCUser) {
         NFCLogger.log("Successfully reloaded money to \(user.name)")
         self.delegate?.paymentSuccess(user)
     }
     
-    func didReadUser(user: XealUser) {
+    func didReadUser(user: NFCUser) {
         NFCLogger.log("Successfully read user: \(user.name)")
         self.currUser = user
         self.delegate?.userUpdated(user)

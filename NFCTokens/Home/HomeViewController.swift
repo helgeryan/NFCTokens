@@ -84,7 +84,7 @@ class HomeViewController: UIViewController {
         animationView.isHidden = true
     }
     
-    func setupWithUser(_ user: XealUser) {
+    func setupWithUser(_ user: NFCUser) {
         nameLabel.text = user.name
         currentFundsLabel.text = user.fundsAvailable
     }
@@ -117,7 +117,7 @@ class HomeViewController: UIViewController {
     }
     
     // MARK: - Demo Payment Processing
-    func pay(user: XealUser) {
+    func pay(user: NFCUser) {
         if isPaymentProcessing {
             return
         }
@@ -202,11 +202,11 @@ extension HomeViewController: ReloadAmountViewDelegate {
 }
 
 extension HomeViewController: HomeViewModelDelegate {
-    func userUpdated(_ user: XealUser) {
+    func userUpdated(_ user: NFCUser) {
         setupWithUser(user)
     }
     
-    func paymentSuccess(_ user: XealUser) {
+    func paymentSuccess(_ user: NFCUser) {
         pay(user: user)
     }
     

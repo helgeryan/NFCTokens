@@ -11,7 +11,7 @@
 		E600195E295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = E600195D295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift */; };
 		E6001961295F434800216228 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001960295F434800216228 /* HomeViewModel.swift */; };
 		E6001964295F4ECA00216228 /* ReloadAmmount.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001963295F4ECA00216228 /* ReloadAmmount.swift */; };
-		E6001966295F4F3600216228 /* XealUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001965295F4F3600216228 /* XealUser.swift */; };
+		E6001966295F4F3600216228 /* NFCUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = E6001965295F4F3600216228 /* NFCUser.swift */; };
 		E6001968295F61D700216228 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = E6001967295F61D700216228 /* README.md */; };
 		E61F481C29527DAC00D937B8 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F481B29527DAC00D937B8 /* AppDelegate.swift */; };
 		E61F481E29527DAC00D937B8 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E61F481D29527DAC00D937B8 /* SceneDelegate.swift */; };
@@ -52,7 +52,7 @@
 		E600195D295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "NFCNDEFReaderSession+extensions.swift"; sourceTree = "<group>"; };
 		E6001960295F434800216228 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E6001963295F4ECA00216228 /* ReloadAmmount.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReloadAmmount.swift; sourceTree = "<group>"; };
-		E6001965295F4F3600216228 /* XealUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = XealUser.swift; sourceTree = "<group>"; };
+		E6001965295F4F3600216228 /* NFCUser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NFCUser.swift; sourceTree = "<group>"; };
 		E6001967295F61D700216228 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = SOURCE_ROOT; };
 		E61F481829527DAC00D937B8 /* NFCTokens.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = NFCTokens.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E61F481B29527DAC00D937B8 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -119,6 +119,7 @@
 		E600195F295F433C00216228 /* Home */ = {
 			isa = PBXGroup;
 			children = (
+				E69AB7082952EA9600D6E98C /* ConfirmPayment */,
 				E61F481F29527DAC00D937B8 /* HomeViewController.swift */,
 				E6001960295F434800216228 /* HomeViewModel.swift */,
 			);
@@ -129,7 +130,7 @@
 			isa = PBXGroup;
 			children = (
 				E6001963295F4ECA00216228 /* ReloadAmmount.swift */,
-				E6001965295F4F3600216228 /* XealUser.swift */,
+				E6001965295F4F3600216228 /* NFCUser.swift */,
 			);
 			path = DataModels;
 			sourceTree = "<group>";
@@ -155,18 +156,13 @@
 		E61F481A29527DAC00D937B8 /* NFCTokens */ = {
 			isa = PBXGroup;
 			children = (
+				E69EAF692B5199F10064679F /* App */,
 				E69EAF602B4B1E040064679F /* NFC */,
 				E6001967295F61D700216228 /* README.md */,
 				E6B595EB295BE6270023F6EE /* NFCTokens.entitlements */,
 				E61F482C29527DAE00D937B8 /* Info.plist */,
-				E69AB7082952EA9600D6E98C /* ConfirmPayment */,
 				E6001962295F4EB100216228 /* DataModels */,
-				E6E8C1DE29556BE1008DCF23 /* Delegates */,
-				E6B149192952C20C0000BE9D /* Extensions */,
-				E61F4835295280D200D937B8 /* Fonts */,
 				E600195F295F433C00216228 /* Home */,
-				E6B1491229528EDA0000BE9D /* IBDesignables */,
-				E6E8C1DF29556C04008DCF23 /* MainXibs */,
 				E6E8C1E029556C1D008DCF23 /* Resources */,
 				E61F483229527E4F00D937B8 /* Views */,
 				E69EAF672B4DEE3F0064679F /* Logger.swift */,
@@ -227,6 +223,17 @@
 			path = NFC;
 			sourceTree = "<group>";
 		};
+		E69EAF692B5199F10064679F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				E61F481B29527DAC00D937B8 /* AppDelegate.swift */,
+				E61F481D29527DAC00D937B8 /* SceneDelegate.swift */,
+				E61F482929527DAE00D937B8 /* LaunchScreen.storyboard */,
+				E61F482129527DAC00D937B8 /* Main.storyboard */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
 		E6B1491229528EDA0000BE9D /* IBDesignables */ = {
 			isa = PBXGroup;
 			children = (
@@ -245,27 +252,12 @@
 			path = Extensions;
 			sourceTree = "<group>";
 		};
-		E6E8C1DE29556BE1008DCF23 /* Delegates */ = {
-			isa = PBXGroup;
-			children = (
-				E61F481B29527DAC00D937B8 /* AppDelegate.swift */,
-				E61F481D29527DAC00D937B8 /* SceneDelegate.swift */,
-			);
-			path = Delegates;
-			sourceTree = "<group>";
-		};
-		E6E8C1DF29556C04008DCF23 /* MainXibs */ = {
-			isa = PBXGroup;
-			children = (
-				E61F482929527DAE00D937B8 /* LaunchScreen.storyboard */,
-				E61F482129527DAC00D937B8 /* Main.storyboard */,
-			);
-			path = MainXibs;
-			sourceTree = "<group>";
-		};
 		E6E8C1E029556C1D008DCF23 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				E6B1491229528EDA0000BE9D /* IBDesignables */,
+				E6B149192952C20C0000BE9D /* Extensions */,
+				E61F4835295280D200D937B8 /* Fonts */,
 				E61F48462952812400D937B8 /* checkmark.json */,
 				E61F48452952812400D937B8 /* smallspinner.json */,
 				E61F482729527DAE00D937B8 /* Assets.xcassets */,
@@ -416,7 +408,7 @@
 				E69EAF642B4DE6F60064679F /* NFCError.swift in Sources */,
 				E6B1491429528F020000BE9D /* UIView+Designables.swift in Sources */,
 				E6E8C1DC29554114008DCF23 /* UIFont+extensions.swift in Sources */,
-				E6001966295F4F3600216228 /* XealUser.swift in Sources */,
+				E6001966295F4F3600216228 /* NFCUser.swift in Sources */,
 				E600195E295E0EA700216228 /* NFCNDEFReaderSession+extensions.swift in Sources */,
 				E69EAF662B4DE7200064679F /* NFCAction.swift in Sources */,
 			);

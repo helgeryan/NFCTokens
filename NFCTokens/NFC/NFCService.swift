@@ -9,8 +9,8 @@ import Foundation
 import CoreNFC
 
 protocol NFCServiceDelegate {
-    func didReadUser(user: XealUser)
-    func reloadCompleted(user: XealUser)
+    func didReadUser(user: NFCUser)
+    func reloadCompleted(user: NFCUser)
     func nfcFinishedWithError(error: NFCError)
 }
 
@@ -124,7 +124,7 @@ class NFCService: NSObject {
     /// Decode a data structure from a NFCNDEFPayload
     ///
     /// ```
-    /// let user: XealUser = decodeStruct(payload)
+    /// let user: NFCUser = decodeStruct(payload)
     /// ```
     ///
     /// > Warning: Must specify the type or the Data Structure
@@ -177,7 +177,7 @@ class NFCService: NSObject {
         
         switch result {
         case .success(let payload):
-            if let user: XealUser = self.decodeStruct(payload) {
+            if let user: NFCUser = self.decodeStruct(payload) {
                 DispatchQueue.main.async {
                     self.delegate?.didReadUser(user: user)
                     session.alertMessage = "Hello \(user.firstName)!"
@@ -194,7 +194,7 @@ class NFCService: NSObject {
         }
     }
     
-    private func updateUserAccountFundsAvailable(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser, amount: ReloadAmount) async {
+    private func updateUserAccountFundsAvailable(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: NFCUser, amount: ReloadAmount) async {
         NFCLogger.log("Reloading \(amount.dollarString) to \(user.name)")
         
         let result = await read(session: session, tag: tag)
@@ -202,7 +202,7 @@ class NFCService: NSObject {
         
         switch result {
         case .success(let payload):
-            if var tagUser: XealUser = self.decodeStruct(payload), tagUser.id == user.id {
+            if var tagUser: NFCUser = self.decodeStruct(payload), tagUser.id == user.id {
                 tagUser.accountValue = tagUser.accountValue + amount.value
                 let result = await write(session: session, tag: tag, data: tagUser)
                 switch result {
@@ -226,7 +226,7 @@ class NFCService: NSObject {
         }
     }
     
-    private func creatUser(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: XealUser) async {
+    private func creatUser(session: NFCNDEFReaderSession, tag: NFCNDEFTag, user: NFCUser) async {
         let result = await write(session: session, tag: tag, data: user)
         switch result {
         case .success(let data):

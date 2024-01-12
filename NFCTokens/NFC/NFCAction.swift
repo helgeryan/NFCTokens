@@ -9,9 +9,9 @@ import Foundation
 
 
 enum NFCAction: Equatable {
-    case createUser(user: XealUser)
+    case createUser(user: NFCUser)
     case readUser
-    case reloadUser(user: XealUser, amount: ReloadAmount)
+    case reloadUser(user: NFCUser, amount: ReloadAmount)
     
     var prompt: String {
         switch self {
