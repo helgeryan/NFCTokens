@@ -1,6 +1,6 @@
 //
 //  NFCService.swift
-//  Xeal Challenge App
+//  NFCTokens
 //
 //  Created by Ryan Helgeson on 1/7/24.
 //

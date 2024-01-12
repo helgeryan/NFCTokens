@@ -1,6 +1,6 @@
 //
 //  NFCError.swift
-//  Xeal Challenge App
+//  NFCTokens
 //
 //  Created by Ryan Helgeson on 1/9/24.
 //

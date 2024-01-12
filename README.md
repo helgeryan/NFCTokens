@@ -1,4 +1,4 @@
-# Xeal Example App - Ryan Helgeson
+# NFC Tokens Example App - Ryan Helgeson
 
 ## Description
 Example app used to display ability to implement a simple app to read/write NFC Tags. App required to meet the following requirements: 
@@ -25,9 +25,9 @@ lottie-ios: https://airbnb.io/lottie/#/ios
     a. Open up Terminal
     b. Navigate to the folder that contains 'Podfile'
     c. run a 'pod install'
-3. Open up 'Xeal Challenge App.xcworkspace' (opening Xeal Challenge App.xcodeproj will not run because pods are not included).
+3. Open up 'NFCTokens.xcworkspace' (opening NFCTokens.xcodeproj will not run because pods are not included).
 4. Hook up a iPhone desired iPhone device to computer.
-   NOTE: Project is set to run on a device of iOS 16.0 or newer, make sure deivce is the correct version. (If a 16.0 device is unavailable change minimum deployment by opening Xeal Challenge App.xcodeproj > General > Minimum Deployments. Rerun step 2 for installing pods)
+   NOTE: Project is set to run on a device of iOS 16.0 or newer, make sure deivce is the correct version. (If a 16.0 device is unavailable change minimum deployment by opening NFCTokens.xcodeproj > General > Minimum Deployments. Rerun step 2 for installing pods)
 5. Select the iPhone as the target run device
 6. Build/Run
 

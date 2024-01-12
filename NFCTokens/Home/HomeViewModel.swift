@@ -1,6 +1,6 @@
 //
 //  HomeViewModel.swift
-//  Xeal Challenge App
+//  NFCTokens
 //
 //  Created by Ryan Helgeson on 12/30/22.
 //
